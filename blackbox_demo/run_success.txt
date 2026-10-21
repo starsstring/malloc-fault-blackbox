@@ -1,0 +1,16 @@
+Environment: Windows x64 / TinyCC 0.9.27
+Command: blackbox --budget 256
+Exit code: 0
+
+CONFIG sample_bytes=8 header_bytes=16 window=4 budget=256
+CAPTURE event=2 frames=2 bytes=32 used=32
+CAPTURE event=6 frames=4 bytes=48 used=80
+CAPTURE event=9 frames=4 bytes=48 used=128
+CAPTURE event=11 frames=4 bytes=48 used=176
+LIVE_RING final_frames=9,10,11,12
+SNAPSHOT event=2 frames=1:25.0,2:42.0
+SNAPSHOT event=6 frames=3:27.0,4:28.0,5:29.0,6:46.0
+SNAPSHOT event=9 frames=6:46.0,7:26.0,8:27.0,9:49.0
+SNAPSHOT event=11 frames=8:27.0,9:49.0,10:26.0,11:51.0
+SUMMARY events=4 saved=4 rejected=0 alloc_failed=0 used=176
+CLEANUP blocks=4 released=176 remaining=0
