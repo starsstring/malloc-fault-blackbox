@@ -9,6 +9,9 @@
 - [完整研究报告 Markdown](docs/malloc-study.md)
 - [报告 PDF](docs/malloc-study.pdf)
 - [可编辑 Word 报告](docs/malloc-study.docx)
+- [后续 Linux 验证记录](VALIDATION.md)
+
+`docs/` 内报告保留 Windows 阶段成稿，Linux 自动测试是上传 GitHub 后补充的验证，见上方记录。
 
 报告比较了学生信息链表、传感器数组扩容、手写简化分配器和故障现场黑匣子四种方案。本例选择黑匣子，是为了具体说明实时数据与事件数据的不同生命周期。
 环形缓冲区和快照是已有方法，报告注明了与 Linux ftrace 快照机制的关系；本项目不宣称算法首创，也不将题目唯一作为已验证结论。
@@ -70,8 +73,8 @@ REVIEW.md                       实现与交付核对记录
 
 ## 验证范围
 
-本地 Windows x64 / TinyCC 0.9.27 已通过全部 31 项行为检查。自动测试会校验历史帧内容、顺序、预算边界、申请失败后的数据完整性、快照数量上限和非法参数。
-GitHub Actions 在 Ubuntu 24.04 上分别运行 GCC、Clang，以及 GCC 的 ASan/UBSan 构建，运行状态见仓库 Actions 页面。
+本地 Windows x64 / TinyCC 0.9.27 已通过全部 31 项行为检查。自动测试校验历史帧内容、顺序、预算边界、申请失败后的数据完整性、快照数量上限和非法参数。
+GitHub Actions 已在 Ubuntu 24.04 上通过 GCC、Clang，以及 GCC 的 ASan/UBSan 构建与行为检查，具体提交和运行链接见 [VALIDATION.md](VALIDATION.md)。
 鲁班猫实机尚未验证。Windows、Linux 自动测试和开发板实测属于不同证据，不能互相替代。
 
 ## 使用边界

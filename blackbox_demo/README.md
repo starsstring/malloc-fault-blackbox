@@ -3,7 +3,8 @@
 这是 malloc 作业的完整 C 案例。普通采样只更新固定环形缓冲区；异常发生时，申请一块独立内存，复制截至触发时的最近若干帧。继续采样时，旧快照仍保持不变。
 
 代码是标准 C11 用户态程序，不依赖 GPIO、传感器、内核模块或开发板型号。温度均为模拟数据。
-当前验证环境是 Windows x64 / TinyCC 0.9.27，共 31 项行为检查通过；Linux、鲁班猫及 sanitizer 尚未实测。
+本目录的 `verification.txt` 与 `run_*.txt` 记录 Windows x64 / TinyCC 0.9.27 的 31 项行为检查。
+上传 GitHub 后，Ubuntu 24.04 的 GCC、Clang 和 ASan/UBSan 构建与行为检查也已通过，见 [后续验证记录](../VALIDATION.md)。鲁班猫实机尚未验证。
 
 ## Linux 或鲁班猫运行
 
@@ -25,7 +26,7 @@ cc -std=c11 -O2 -Wall -Wextra -Wpedantic -Werror blackbox.c -o blackbox
 前一条展示预算不足，后一条展示申请失败。两者预期均以非零状态退出，表示存在未能保存的事件；程序仍会输出并释放已有快照。
 正常路径使用 `--budget 256`，保存全部四个事件，退出状态为零。
 
-已有 make 和 Python 3 时可以运行 `make test`。可选的 `make sanitize` 需要平台支持 AddressSanitizer 和 UndefinedBehaviorSanitizer，当前未执行该项验证。
+已有 make 和 Python 3 时可以运行 `make test`。可选的 `make sanitize` 需要平台支持 AddressSanitizer 和 UndefinedBehaviorSanitizer；已在上述 Linux CI 中通过，其他平台需各自确认支持情况。
 
 ## 运行内容
 
