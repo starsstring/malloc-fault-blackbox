@@ -1,88 +1,96 @@
 [
   {
-    "text": "画到一半，",
+    "text": "八格不够了，",
     "startMs": 641,
-    "endMs": 1712,
+    "endMs": 1891,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "八格不够了。",
-    "startMs": 1712,
-    "endMs": 3244,
-    "timestampMs": null,
-    "confidence": null,
-    "pageBreakAfter": true
-  },
-  {
-    "text": "那就用 realloc 试着扩到十六格。",
-    "startMs": 3244,
-    "endMs": 6752,
+    "text": "就用 realloc 试着扩到十六格。",
+    "startMs": 1891,
+    "endMs": 5183,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "它可能原地调整，",
-    "startMs": 6752,
-    "endMs": 8384,
+    "startMs": 5183,
+    "endMs": 6790,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "也可能把原来的内容搬到新位置。",
-    "startMs": 8384,
-    "endMs": 11764,
+    "text": "也可能搬到新位置。",
+    "startMs": 6790,
+    "endMs": 8907,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "成功后，",
-    "startMs": 11764,
-    "endMs": 12683,
+    "text": "搬迁时，",
+    "startMs": 8907,
+    "endMs": 9915,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "旧对象就失效了，",
-    "startMs": 12683,
-    "endMs": 14303,
+    "text": "旧范围的内容会保留。",
+    "startMs": 9915,
+    "endMs": 12160,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "要使用返回的新指针。",
-    "startMs": 14303,
-    "endMs": 16573,
+    "text": "成功返回后，",
+    "startMs": 12160,
+    "endMs": 13448,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "旧范围的内容会保留，",
-    "startMs": 16573,
-    "endMs": 18448,
+    "text": "旧对象失效，",
+    "startMs": 13448,
+    "endMs": 14736,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "新增加的格子，",
-    "startMs": 18448,
-    "endMs": 19941,
+    "text": "要改用新指针。",
+    "startMs": 14736,
+    "endMs": 16560,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "则需要我们继续初始化。",
-    "startMs": 19941,
-    "endMs": 21917,
+    "text": "新增加的格子还没初始化，",
+    "startMs": 16560,
+    "endMs": 19124,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "先写入，",
+    "startMs": 19124,
+    "endMs": 20081,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "再继续画。",
+    "startMs": 20081,
+    "endMs": 21215,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

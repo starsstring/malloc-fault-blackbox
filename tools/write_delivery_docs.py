@@ -17,7 +17,9 @@ readme=f'''# malloc 的一生：一张会长大的像素画
 
 ## 作品内容
 
-采用 Remotion 绘制连续动画，全片统一暖白底、陶土红与灰绿强调色，配有平稳清晰的女声解说和中文字幕。像素逐格上色、扩容搬迁、失败保留原图、释放后禁止访问；进一步展示虚拟页映射、空闲块拆分与碎片合并。
+采用 Remotion 绘制连续动画，全片统一暖白底、陶土红与灰绿强调色，配有平稳的女声解说和中文字幕。开场直接进入扩容疑问，随后讲清需求、标准接口与分配器实现的演进。像素对象贯穿申请、初始化、搬迁、失败与释放，成功与失败明确标成两条分支。
+
+关键动画使用语音 WordBoundary 时间触发，包含 73 个语义时间点；错误高亮、代码行、指针更新、像素初始化与碎片合并随对应解说发生。说明文字为 30 像素，代码主要为 37–43 像素，保留统一背景和留白。
 
 | 开始时间 | 章节 |
 | --- | --- |
@@ -46,7 +48,10 @@ pnpm render
 
 | 文件 | 用途 |
 | --- | --- |
-| `src/Visuals.tsx` | 图解、像素运动和各章视觉 |
+| `src/Visuals.tsx` | 统一背景、故事状态与 15 章视觉入口 |
+| `src/*Scenes.tsx`、`src/visual-kit.tsx` | 历史、机制、生命周期与图解组件 |
+| `visual-cue-definitions.json` | 将动画事件绑定到讲稿短语 |
+| `src/visual-cues.json` | 根据实际配音生成的动画时间 |
 | `src/Scenes.tsx` | 逐章配音、字幕与场景连接 |
 | `src/Movie.tsx` | 主时间轴和转场 |
 | `narration.json` | 解说文稿 |
@@ -55,7 +60,7 @@ pnpm render
 | `public/word-timing/` | 语音服务返回的逐词时间记录 |
 | `examples/pixels.c` | 防溢出、判空、初始化、安全扩容和释放的最小示例 |
 
-如需修改讲稿并重新生成声音，安装 `edge-tts==7.3.1` 后运行 `python tools/generate_broadcast.py`，再运行 `python tools/assemble.py`。后者需要 FFmpeg 与 NumPy，会根据语音服务的逐词时间记录构建字幕和场景；没有额外加速或调高音调。在线服务可用性会变化，修改后仍需核对实际配音。
+如需修改讲稿并重新生成声音，安装 `edge-tts==7.3.1` 后运行 `python tools/generate_broadcast.py`，再运行 `python tools/assemble.py`、`python tools/write_delivery_docs.py` 和 `python tools/verify_cues.py`。组装需要 FFmpeg 与 NumPy，会根据逐词时间构建字幕、动画事件与场景；修改讲稿时也应更新对应短语定义。没有额外加速或调高音调。在线服务可用性会变化，修改后仍需核对实际配音。
 
 ## 最小 C 示例
 

@@ -1,88 +1,104 @@
 [
   {
-    "text": "把这些步骤连起来，",
+    "text": "把小画的一生连起来。",
     "startMs": 641,
-    "endMs": 2223,
+    "endMs": 2874,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "就有了一条完整路径：",
-    "startMs": 2223,
-    "endMs": 4136,
+    "text": "计算大小，",
+    "startMs": 2874,
+    "endMs": 4035,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "大小计算要防溢出，",
-    "startMs": 4136,
-    "endMs": 5947,
+    "text": "先防溢出。",
+    "startMs": 4035,
+    "endMs": 5527,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "申请之后要判空，",
-    "startMs": 5947,
-    "endMs": 7657,
+    "text": "申请之后，",
+    "startMs": 5527,
+    "endMs": 6675,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "读取之前先初始化，",
-    "startMs": 7657,
-    "endMs": 9634,
+    "text": "立即判空。",
+    "startMs": 6675,
+    "endMs": 8091,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "访问始终守住边界。",
-    "startMs": 9634,
-    "endMs": 11969,
+    "text": "读取之前，",
+    "startMs": 8091,
+    "endMs": 9239,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "扩容使用临时指针，",
-    "startMs": 11969,
-    "endMs": 13895,
+    "text": "先初始化，",
+    "startMs": 9239,
+    "endMs": 10336,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "失败分支保留清楚的所有权。",
-    "startMs": 13895,
-    "endMs": 17071,
+    "text": "并守住边界。",
+    "startMs": 10336,
+    "endMs": 12058,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "扩容用临时指针，",
+    "startMs": 12058,
+    "endMs": 13831,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "失败保留原块。",
+    "startMs": 13831,
+    "endMs": 15680,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "最后，",
-    "startMs": 17071,
-    "endMs": 17887,
+    "startMs": 15680,
+    "endMs": 16497,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "让仍由程序拥有的每一块空间，",
-    "startMs": 17887,
-    "endMs": 20387,
+    "text": "让仍由程序拥有的每块空间，",
+    "startMs": 16497,
+    "endMs": 19201,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "恰好释放一次。",
-    "startMs": 20387,
-    "endMs": 21917,
+    "startMs": 19201,
+    "endMs": 20691,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

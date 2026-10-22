@@ -1,80 +1,80 @@
 [
   {
-    "text": "现在回到开头。",
+    "text": "回到最初的问题。",
     "startMs": 641,
-    "endMs": 2594,
+    "endMs": 2657,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "小画变大了，",
-    "startMs": 2594,
+    "text": "扩容可能搬家，",
+    "startMs": 2657,
     "endMs": 3997,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "地址可能改变，",
+    "text": "也可能失败；",
     "startMs": 3997,
-    "endMs": 5489,
+    "endMs": 5259,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "扩容也可能失败。",
-    "startMs": 5489,
-    "endMs": 7440,
+    "text": "成功后，",
+    "startMs": 5259,
+    "endMs": 6127,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "理解 malloc，",
-    "startMs": 7440,
-    "endMs": 8818,
+    "text": "要使用返回的新指针。",
+    "startMs": 6127,
+    "endMs": 8448,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "不只是记住怎么申请空间，",
-    "startMs": 8818,
-    "endMs": 11331,
+    "text": "小画的生命周期，",
+    "startMs": 8448,
+    "endMs": 10132,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "更是管理对象的一生：",
-    "startMs": 11331,
-    "endMs": 13206,
+    "text": "也是一份责任：",
+    "startMs": 10132,
+    "endMs": 11535,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "申请有依据，",
-    "startMs": 13206,
-    "endMs": 14520,
+    "startMs": 11535,
+    "endMs": 12861,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "使用有边界，",
-    "startMs": 14520,
-    "endMs": 15833,
+    "startMs": 12861,
+    "endMs": 14150,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "释放有归属。",
-    "startMs": 15833,
-    "endMs": 17327,
+    "startMs": 14150,
+    "endMs": 15590,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

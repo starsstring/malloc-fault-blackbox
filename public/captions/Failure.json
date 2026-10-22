@@ -1,88 +1,96 @@
 [
   {
-    "text": "如果扩容没成功呢？",
+    "text": "换一条分支：",
     "startMs": 641,
-    "endMs": 2772,
+    "endMs": 1955,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "如果扩容失败呢？",
+    "startMs": 1955,
+    "endMs": 3767,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "对这里的非零请求，",
-    "startMs": 2772,
-    "endMs": 4596,
+    "startMs": 3767,
+    "endMs": 5578,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "失败会返回空指针，",
-    "startMs": 4596,
-    "endMs": 6777,
+    "text": "返回值是空指针，",
+    "startMs": 5578,
+    "endMs": 7390,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "但原来的对象仍然有效。",
-    "startMs": 6777,
-    "endMs": 9367,
+    "text": "原来的小画仍然有效。",
+    "startMs": 7390,
+    "endMs": 9775,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "所以，",
-    "startMs": 9367,
-    "endMs": 10247,
+    "startMs": 9775,
+    "endMs": 10655,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "先用临时指针接住结果，",
-    "startMs": 10247,
-    "endMs": 12479,
+    "startMs": 10655,
+    "endMs": 12887,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "成功了再更新。",
-    "startMs": 12479,
-    "endMs": 14226,
+    "startMs": 12887,
+    "endMs": 14634,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "直接覆盖原指针，",
-    "startMs": 14226,
-    "endMs": 15948,
+    "startMs": 14634,
+    "endMs": 16293,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "就可能在失败时丢掉原块的唯一引用。",
-    "startMs": 15948,
-    "endMs": 19813,
+    "text": "就可能丢掉原块的唯一引用。",
+    "startMs": 16293,
+    "endMs": 19086,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "小画还在，",
-    "startMs": 19813,
-    "endMs": 20999,
+    "startMs": 19086,
+    "endMs": 20272,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "却再也找不到它了。",
-    "startMs": 20999,
-    "endMs": 22631,
+    "text": "却找不到它了。",
+    "startMs": 20272,
+    "endMs": 21636,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

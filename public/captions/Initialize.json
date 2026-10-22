@@ -1,72 +1,64 @@
 [
   {
-    "text": "刚拿到的格子里，",
+    "text": "刚拿到的格子，",
     "startMs": 641,
-    "endMs": 2159,
+    "endMs": 2095,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "不是一张现成的图。",
-    "startMs": 2159,
-    "endMs": 4277,
+    "text": "还不是一张现成的图。",
+    "startMs": 2095,
+    "endMs": 4264,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "我们要先在合法范围内写入颜色，",
-    "startMs": 4277,
-    "endMs": 7262,
+    "text": "先在合法范围内写入颜色，",
+    "startMs": 4264,
+    "endMs": 6879,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "再读取像素。",
-    "startMs": 7262,
-    "endMs": 8984,
+    "startMs": 6879,
+    "endMs": 8601,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "如果需要把全部字节置零，",
-    "startMs": 8984,
-    "endMs": 11140,
+    "text": "如果想让全部字节一开始就是零，",
+    "startMs": 8601,
+    "endMs": 11369,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "可以选择 calloc。",
-    "startMs": 11140,
+    "startMs": 11369,
     "endMs": 13231,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "它和 malloc 的初始化语义不一样，",
+    "text": "两种申请都可能失败，",
     "startMs": 13231,
-    "endMs": 15884,
+    "endMs": 15208,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "申请失败时，",
-    "startMs": 15884,
-    "endMs": 17211,
-    "timestampMs": null,
-    "confidence": null,
-    "pageBreakAfter": true
-  },
-  {
-    "text": "也一样要处理。",
-    "startMs": 17211,
-    "endMs": 18613,
+    "text": "也都需要检查结果。",
+    "startMs": 15208,
+    "endMs": 17045,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

@@ -1,96 +1,112 @@
 [
   {
-    "text": "有些大小，",
+    "text": "为什么需要动态分配？",
     "startMs": 641,
-    "endMs": 1840,
+    "endMs": 2861,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "写代码的时候还不知道。",
-    "startMs": 1840,
-    "endMs": 4162,
+    "text": "输入长短、图片大小，",
+    "startMs": 2861,
+    "endMs": 5234,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "比如用户会输入多长的文字，",
-    "startMs": 4162,
-    "endMs": 6994,
+    "text": "往往运行时才知道。",
+    "startMs": 5234,
+    "endMs": 7606,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "一张图片要存多少个像素。",
-    "startMs": 6994,
-    "endMs": 9864,
-    "timestampMs": null,
-    "confidence": null,
-    "pageBreakAfter": true
-  },
-  {
-    "text": "动态内存分配，",
-    "startMs": 9864,
-    "endMs": 11446,
-    "timestampMs": null,
-    "confidence": null,
-    "pageBreakAfter": true
-  },
-  {
-    "text": "就是把申请空间的决定留到运行时。",
-    "startMs": 11446,
-    "endMs": 15170,
-    "timestampMs": null,
-    "confidence": null,
-    "pageBreakAfter": true
-  },
-  {
-    "text": "这个想法早于 Linux，",
-    "startMs": 15170,
-    "endMs": 17211,
-    "timestampMs": null,
-    "confidence": null,
-    "pageBreakAfter": true
-  },
-  {
-    "text": "早期 Unix 就有分配器。",
-    "startMs": 17211,
-    "endMs": 19953,
+    "text": "早期 Unix 已经提供了内存分配器。",
+    "startMs": 7606,
+    "endMs": 11318,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "一九八七年，",
-    "startMs": 19953,
-    "endMs": 21331,
+    "startMs": 11318,
+    "endMs": 12670,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "Doug Lea 开始编写自己的实现；",
-    "startMs": 21331,
-    "endMs": 24264,
+    "text": "Doug Lea 开始编写自己的实现，",
+    "startMs": 12670,
+    "endMs": 15361,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "后来和今天的各种 C 库，",
-    "startMs": 24264,
-    "endMs": 26420,
+    "text": "权衡速度、空间和碎片。",
+    "startMs": 15361,
+    "endMs": 18206,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "也一直在改进分配策略。",
-    "startMs": 26420,
-    "endMs": 28680,
+    "text": "C 标准规定接口要做什么；",
+    "startMs": 18206,
+    "endMs": 20948,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "具体怎样找空间，",
+    "startMs": 20948,
+    "endMs": 22555,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "由 C 库的实现决定。",
+    "startMs": 22555,
+    "endMs": 24673,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "今天，",
+    "startMs": 24673,
+    "endMs": 25527,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "各种分配器仍在改进复用和并发。",
+    "startMs": 25527,
+    "endMs": 29099,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "接口相对稳定，",
+    "startMs": 29099,
+    "endMs": 30706,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "背后的机制一直在演进。",
+    "startMs": 30706,
+    "endMs": 33073,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

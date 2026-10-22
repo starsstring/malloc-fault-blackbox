@@ -1,80 +1,72 @@
 [
   {
-    "text": "我们先看最基本的约定。",
+    "text": "先认清 malloc 的承诺。",
     "startMs": 641,
-    "endMs": 3053,
+    "endMs": 3219,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "对非零大小的申请，",
-    "startMs": 3053,
-    "endMs": 4864,
+    "text": "对非零请求，",
+    "startMs": 3219,
+    "endMs": 4673,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "malloc 返回一块满足大小和基本对齐要求的空间，",
-    "startMs": 4864,
-    "endMs": 9341,
+    "text": "它提供满足大小和基本对齐要求的空间；",
+    "startMs": 4673,
+    "endMs": 8333,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "失败就返回空指针。",
-    "startMs": 9341,
-    "endMs": 11637,
+    "text": "失败，",
+    "startMs": 8333,
+    "endMs": 9022,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "不过，",
-    "startMs": 11637,
-    "endMs": 12415,
+    "text": "返回空指针。",
+    "startMs": 9022,
+    "endMs": 10693,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "拿到空间不等于拿到了有效数据。",
-    "startMs": 12415,
-    "endMs": 15910,
+    "text": "但拿到空间，",
+    "startMs": 10693,
+    "endMs": 11956,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "它不会初始化内容，",
-    "startMs": 15910,
-    "endMs": 17670,
+    "text": "还不等于拿到了有效数据。",
+    "startMs": 11956,
+    "endMs": 14685,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "也不会帮你决定什么时候释放。",
-    "startMs": 17670,
-    "endMs": 20693,
-    "timestampMs": null,
-    "confidence": null,
-    "pageBreakAfter": true
-  },
-  {
-    "text": "这些事，",
-    "startMs": 20693,
-    "endMs": 21650,
+    "text": "初始化、访问边界和释放时机，",
+    "startMs": 14685,
+    "endMs": 17976,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "仍然由程序负责。",
-    "startMs": 21650,
-    "endMs": 23322,
+    "startMs": 17976,
+    "endMs": 19725,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

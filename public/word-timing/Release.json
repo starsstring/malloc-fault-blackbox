@@ -2,361 +2,319 @@
   {
     "type": "WordBoundary",
     "offset": 1010000,
-    "duration": 3443750,
-    "text": "不再"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 4581660,
-    "duration": 2423330,
-    "text": "需要"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 7132500,
-    "duration": 2040830,
+    "duration": 2550830,
     "text": "小"
   },
   {
     "type": "WordBoundary",
-    "offset": 9173330,
-    "duration": 2295830,
+    "offset": 3561250,
+    "duration": 1658330,
     "text": "画"
   },
   {
     "type": "WordBoundary",
-    "offset": 11469580,
-    "duration": 3316250,
-    "text": "时"
+    "offset": 5347080,
+    "duration": 4209160,
+    "text": "用完"
   },
   {
     "type": "WordBoundary",
-    "offset": 16826660,
-    "duration": 1530410,
-    "text": "就"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 18357080,
-    "duration": 1658330,
-    "text": "该"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 20142910,
-    "duration": 3826660,
-    "text": "释放"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 24224580,
-    "duration": 1020410,
-    "text": "这"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 25245000,
-    "duration": 1275410,
-    "text": "块"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 26647910,
-    "duration": 4591660,
-    "text": "空间"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 31240000,
-    "duration": 1913330,
+    "offset": 9556250,
+    "duration": 2168330,
     "text": "了"
   },
   {
     "type": "WordBoundary",
-    "offset": 38902910,
-    "duration": 3826660,
+    "offset": 13892910,
+    "duration": 1402910,
+    "text": "就"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 15295830,
+    "duration": 1530410,
+    "text": "该"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 17081660,
+    "duration": 3316250,
+    "text": "释放"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 20525410,
+    "duration": 5102080,
+    "text": "空间"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 31505000,
+    "duration": 3954160,
     "text": "free"
   },
   {
     "type": "WordBoundary",
-    "offset": 42729580,
-    "duration": 3954160,
+    "offset": 35459160,
+    "duration": 4081660,
     "text": "结束"
   },
   {
     "type": "WordBoundary",
-    "offset": 46683750,
-    "duration": 1275410,
-    "text": "的"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 47959160,
-    "duration": 2678750,
-    "text": "是"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 50765410,
-    "duration": 4336660,
+    "offset": 39668330,
+    "duration": 4209160,
     "text": "对象"
   },
   {
     "type": "WordBoundary",
-    "offset": 55102080,
+    "offset": 43877500,
     "duration": 765410,
     "text": "的"
   },
   {
     "type": "WordBoundary",
-    "offset": 56122500,
+    "offset": 44897910,
     "duration": 3699160,
     "text": "生命"
   },
   {
     "type": "WordBoundary",
-    "offset": 59949160,
-    "duration": 5357080,
+    "offset": 48724580,
+    "duration": 5484580,
     "text": "周期"
   },
   {
     "type": "WordBoundary",
-    "offset": 68112080,
+    "offset": 56377500,
     "duration": 1530410,
     "text": "不"
   },
   {
     "type": "WordBoundary",
-    "offset": 69642910,
-    "duration": 4847080,
+    "offset": 57908330,
+    "duration": 3571250,
     "text": "承诺"
   },
   {
     "type": "WordBoundary",
-    "offset": 74745000,
-    "duration": 1530410,
-    "text": "把"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 76402910,
-    "duration": 3188750,
-    "text": "内容"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 79719580,
-    "duration": 5484580,
+    "offset": 61607080,
+    "duration": 5740000,
     "text": "清零"
   },
   {
     "type": "WordBoundary",
-    "offset": 87627500,
+    "offset": 69897910,
     "duration": 1530410,
     "text": "也"
   },
   {
     "type": "WordBoundary",
-    "offset": 89158330,
-    "duration": 1275410,
+    "offset": 71428750,
+    "duration": 1402910,
     "text": "不"
   },
   {
     "type": "WordBoundary",
-    "offset": 90433750,
+    "offset": 72831660,
     "duration": 4847080,
     "text": "保证"
   },
   {
     "type": "WordBoundary",
-    "offset": 95535830,
+    "offset": 77933750,
     "duration": 4209160,
     "text": "马上"
   },
   {
     "type": "WordBoundary",
-    "offset": 99872500,
-    "duration": 4209160,
+    "offset": 82270410,
+    "duration": 4336660,
     "text": "归还"
   },
   {
     "type": "WordBoundary",
-    "offset": 104336660,
-    "duration": 8418330,
+    "offset": 86862080,
+    "duration": 8545830,
     "text": "操作系统"
   },
   {
     "type": "WordBoundary",
-    "offset": 118622500,
+    "offset": 101275410,
     "duration": 4081660,
     "text": "释放"
   },
   {
     "type": "WordBoundary",
-    "offset": 122831660,
+    "offset": 105484580,
     "duration": 4719580,
     "text": "以后"
   },
   {
     "type": "WordBoundary",
-    "offset": 130357080,
-    "duration": 3316250,
-    "text": "即使"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 133928750,
-    "duration": 3316250,
-    "text": "某些"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 137372500,
-    "duration": 4464160,
+    "offset": 112755000,
+    "duration": 4081660,
     "text": "颜色"
   },
   {
     "type": "WordBoundary",
-    "offset": 142091660,
-    "duration": 2168330,
-    "text": "看"
+    "offset": 117091660,
+    "duration": 3061250,
+    "text": "即使"
   },
   {
     "type": "WordBoundary",
-    "offset": 144260000,
-    "duration": 2168330,
-    "text": "起来"
+    "offset": 120280410,
+    "duration": 4464160,
+    "text": "看起来"
   },
   {
     "type": "WordBoundary",
-    "offset": 146556250,
+    "offset": 124872500,
     "duration": 2423330,
     "text": "还"
   },
   {
     "type": "WordBoundary",
-    "offset": 148979580,
-    "duration": 2933750,
+    "offset": 127295830,
+    "duration": 2806250,
     "text": "在"
   },
   {
     "type": "WordBoundary",
-    "offset": 154081660,
+    "offset": 132270410,
     "duration": 1402910,
     "text": "也"
   },
   {
     "type": "WordBoundary",
-    "offset": 155484580,
-    "duration": 3061250,
+    "offset": 133673330,
+    "duration": 2678750,
     "text": "不能"
   },
   {
     "type": "WordBoundary",
-    "offset": 158800830,
-    "duration": 3316250,
-    "text": "继续"
+    "offset": 136479580,
+    "duration": 1658330,
+    "text": "再"
   },
   {
     "type": "WordBoundary",
-    "offset": 162245000,
-    "duration": 5357080,
+    "offset": 138137910,
+    "duration": 5612080,
     "text": "读写"
   },
   {
     "type": "WordBoundary",
-    "offset": 173469580,
-    "duration": 1785830,
+    "offset": 149490000,
+    "duration": 1785410,
     "text": "把"
   },
   {
     "type": "WordBoundary",
-    "offset": 175382500,
-    "duration": 2295830,
-    "text": "一个"
+    "offset": 151275410,
+    "duration": 2040830,
+    "text": "p"
   },
   {
     "type": "WordBoundary",
-    "offset": 177806250,
-    "duration": 3953750,
-    "text": "指针"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 181760000,
-    "duration": 2168330,
-    "text": "设"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 184056250,
-    "duration": 1913330,
-    "text": "为"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 185969580,
+    "offset": 153571250,
     "duration": 3316250,
+    "text": "设为"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 156887910,
+    "duration": 3188750,
     "text": "空"
   },
   {
     "type": "WordBoundary",
-    "offset": 191964160,
-    "duration": 1530410,
-    "text": "也"
+    "offset": 162372500,
+    "duration": 1785830,
+    "text": "只"
   },
   {
     "type": "WordBoundary",
-    "offset": 193495000,
-    "duration": 3188750,
-    "text": "不会"
+    "offset": 164158330,
+    "duration": 3698750,
+    "text": "处理"
   },
   {
     "type": "WordBoundary",
-    "offset": 196938750,
-    "duration": 2933750,
-    "text": "自动"
+    "offset": 167857080,
+    "duration": 1147910,
+    "text": "了"
   },
   {
     "type": "WordBoundary",
-    "offset": 200000000,
-    "duration": 5995000,
-    "text": "修复"
+    "offset": 169260000,
+    "duration": 1402910,
+    "text": "这"
   },
   {
     "type": "WordBoundary",
-    "offset": 207015410,
-    "duration": 4081660,
-    "text": "指向"
+    "offset": 170663330,
+    "duration": 2040830,
+    "text": "一个"
   },
   {
     "type": "WordBoundary",
-    "offset": 211352080,
-    "duration": 1275410,
-    "text": "旧"
+    "offset": 172831660,
+    "duration": 5102080,
+    "text": "指针"
   },
   {
     "type": "WordBoundary",
-    "offset": 212627500,
-    "duration": 4209160,
-    "text": "对象"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 216836660,
-    "duration": 892910,
-    "text": "的"
-  },
-  {
-    "type": "WordBoundary",
-    "offset": 217984580,
+    "offset": 181887910,
     "duration": 4081660,
     "text": "其他"
   },
   {
     "type": "WordBoundary",
-    "offset": 222193750,
-    "duration": 4847080,
+    "offset": 186097080,
+    "duration": 4464160,
+    "text": "指向"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 190816250,
+    "duration": 1147910,
+    "text": "旧"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 191964160,
+    "duration": 3826660,
+    "text": "对象"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 195790830,
+    "duration": 765410,
+    "text": "的"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 196683750,
+    "duration": 5102080,
     "text": "别名"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 204081660,
+    "duration": 4081660,
+    "text": "仍然"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 208290830,
+    "duration": 2678750,
+    "text": "已经"
+  },
+  {
+    "type": "WordBoundary",
+    "offset": 211097080,
+    "duration": 5357080,
+    "text": "失效"
   }
 ]

@@ -1,0 +1,105 @@
+{
+  "opening": {
+    "grow": "扩到十六格",
+    "move": "像素要搬家吗",
+    "journey": "跟着这张小画"
+  },
+  "background": {
+    "runtime": "运行时才知道",
+    "unix": "早期 Unix",
+    "lea": "一九八七年",
+    "standard": "C 标准",
+    "library": "由 C 库",
+    "modern": "今天",
+    "conclusion": "接口相对稳定"
+  },
+  "contract": {
+    "size": "满足大小",
+    "failure": "失败",
+    "responsibility": "初始化"
+  },
+  "inside": {
+    "allocator": "C 库里的分配器",
+    "reuse": "复用缓存",
+    "split": "被拆出三十二字节",
+    "system": "已有空间不够时",
+    "details": "真实实现"
+  },
+  "virtual": {
+    "contiguous": "连续地址",
+    "mapping": "映射连接",
+    "demand": "按需建立物理页"
+  },
+  "allocate": {
+    "size": "每个像素占四字节",
+    "overflow": "第一步",
+    "request": "第二步",
+    "check": "第三步",
+    "success": "申请成功之后"
+  },
+  "initialize": {
+    "write": "写入颜色",
+    "read": "再读取像素",
+    "zero": "全部字节一开始就是零",
+    "calloc": "可以选择 calloc",
+    "failure": "都可能失败"
+  },
+  "resize": {
+    "request": "realloc",
+    "inPlace": "原地调整",
+    "move": "搬到新位置",
+    "copy": "旧范围的内容会保留",
+    "success": "成功返回后",
+    "invalid": "旧对象失效",
+    "pointer": "改用新指针",
+    "tail": "新增加的格子",
+    "write": "先写入"
+  },
+  "failure": {
+    "branch": "换一条分支",
+    "failed": "返回值是空指针",
+    "keep": "原来的小画仍然有效",
+    "temporary": "先用临时指针",
+    "update": "成功了再更新",
+    "wrong": "直接覆盖原指针",
+    "lost": "找不到它了"
+  },
+  "release": {
+    "free": "free",
+    "noClear": "不承诺清零",
+    "invalid": "不能再读写",
+    "null": "把 p 设为空",
+    "alias": "其他指向旧对象的别名"
+  },
+  "mistakes": {
+    "leak": "内存泄漏",
+    "useAfterFree": "释放以后还去访问",
+    "doubleFree": "同一块空间再次释放",
+    "question": "共同指向一个问题"
+  },
+  "fragment": {
+    "request": "四十八字节的连续请求",
+    "release": "如果中间块被释放",
+    "merge": "相邻空闲块就可能合并",
+    "extend": "实际分配器还可能"
+  },
+  "practice": {
+    "overflow": "计算大小",
+    "check": "申请之后",
+    "initialize": "读取之前",
+    "resize": "扩容用临时指针",
+    "free": "最后"
+  },
+  "tradeoff": {
+    "cost": "管理成本",
+    "pool": "预分配",
+    "evaluate": "是否使用 malloc"
+  },
+  "closing": {
+    "move": "扩容可能搬家",
+    "pointer": "使用返回的新指针",
+    "allocate": "申请有依据",
+    "use": "使用有边界",
+    "free": "释放有归属"
+  }
+}

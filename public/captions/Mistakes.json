@@ -1,80 +1,96 @@
 [
   {
-    "text": "丢掉仍需释放的块的所有引用，",
+    "text": "把三种错误分清楚。",
     "startMs": 641,
-    "endMs": 3294,
+    "endMs": 2900,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "是内存泄漏。",
-    "startMs": 3294,
-    "endMs": 4940,
+    "text": "所有引用都丢了，",
+    "startMs": 2900,
+    "endMs": 4634,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "释放后继续访问，",
-    "startMs": 4940,
-    "endMs": 6675,
+    "text": "仍需释放的内存找不回来，",
+    "startMs": 4634,
+    "endMs": 7045,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "这是内存泄漏。",
+    "startMs": 7045,
+    "endMs": 8818,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "释放以后还去访问，",
+    "startMs": 8818,
+    "endMs": 10693,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "是使用已经失效的对象。",
-    "startMs": 6675,
-    "endMs": 9188,
+    "startMs": 10693,
+    "endMs": 13180,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "对同一块重复释放，",
-    "startMs": 9188,
-    "endMs": 10986,
+    "text": "同一块空间再次释放，",
+    "startMs": 13180,
+    "endMs": 15170,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "是重复释放，",
+    "startMs": 15170,
+    "endMs": 16497,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也属于未定义行为。",
-    "startMs": 10986,
-    "endMs": 13091,
+    "startMs": 16497,
+    "endMs": 18627,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "我们不用真的执行这些错误，",
-    "startMs": 13091,
-    "endMs": 15425,
-    "timestampMs": null,
-    "confidence": null,
-    "pageBreakAfter": true
-  },
-  {
-    "text": "只要记住一个问题：",
-    "startMs": 15425,
-    "endMs": 17096,
+    "text": "它们共同指向一个问题：",
+    "startMs": 18627,
+    "endMs": 20668,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "现在谁拥有它，",
-    "startMs": 17096,
-    "endMs": 18537,
+    "startMs": 20668,
+    "endMs": 22109,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "最后由谁负责释放？",
-    "startMs": 18537,
-    "endMs": 20373,
+    "startMs": 22109,
+    "endMs": 23970,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

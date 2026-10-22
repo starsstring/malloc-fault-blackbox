@@ -1,80 +1,96 @@
 [
   {
-    "text": "现在给小画准备八个格子。",
+    "text": "现在，",
     "startMs": 641,
-    "endMs": 3525,
+    "endMs": 1470,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "我们用三十二位无符号整数表示像素，",
-    "startMs": 3525,
-    "endMs": 7109,
+    "text": "正式给小画申请八个格子。",
+    "startMs": 1470,
+    "endMs": 4328,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "在这个例子里，",
-    "startMs": 7109,
-    "endMs": 8372,
+    "text": "这里每个像素占四字节，",
+    "startMs": 4328,
+    "endMs": 6599,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "每个像素占四字节，",
-    "startMs": 8372,
-    "endMs": 10247,
+    "text": "一共三十二字节。",
+    "startMs": 6599,
+    "endMs": 8601,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "一共需要三十二字节。",
-    "startMs": 10247,
-    "endMs": 12606,
+    "text": "第一步，",
+    "startMs": 8601,
+    "endMs": 9481,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "先检查数量乘以元素大小会不会溢出，",
-    "startMs": 12606,
-    "endMs": 16242,
+    "text": "检查数量乘以元素大小是否溢出。",
+    "startMs": 9481,
+    "endMs": 13040,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "再申请，",
-    "startMs": 16242,
-    "endMs": 17185,
+    "text": "第二步，",
+    "startMs": 13040,
+    "endMs": 13869,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "紧接着判空。",
-    "startMs": 17185,
-    "endMs": 18818,
+    "text": "调用 malloc。",
+    "startMs": 13869,
+    "endMs": 15438,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "别跳过这一步：",
-    "startMs": 18818,
-    "endMs": 20196,
+    "text": "第三步，",
+    "startMs": 15438,
+    "endMs": 16382,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "空指针不能拿来画画。",
-    "startMs": 20196,
-    "endMs": 22198,
+    "text": "立即判空。",
+    "startMs": 16382,
+    "endMs": 17798,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "申请成功之后，",
+    "startMs": 17798,
+    "endMs": 19341,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "才能在合法范围内使用它。",
+    "startMs": 19341,
+    "endMs": 21719,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

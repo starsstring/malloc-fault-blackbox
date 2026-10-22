@@ -1,80 +1,88 @@
 [
   {
-    "text": "一次 malloc，",
+    "text": "小画需要三十二字节。",
     "startMs": 641,
-    "endMs": 1917,
+    "endMs": 3078,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "不一定要惊动操作系统。",
-    "startMs": 1917,
-    "endMs": 4328,
+    "text": "一次 malloc，",
+    "startMs": 3078,
+    "endMs": 4354,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "会先找到 C 库里的分配器。",
+    "startMs": 4354,
+    "endMs": 7071,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "以常见的 glibc 为例，",
-    "startMs": 4328,
-    "endMs": 6229,
+    "startMs": 7071,
+    "endMs": 8946,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "程序先找 C 库里的分配器，",
-    "startMs": 6229,
-    "endMs": 8754,
+    "text": "它会尝试复用缓存和空闲块。",
+    "startMs": 8946,
+    "endMs": 12096,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "它会尝试复用缓存和空闲空间。",
-    "startMs": 8754,
-    "endMs": 12122,
+    "text": "图里，",
+    "startMs": 12096,
+    "endMs": 12874,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "需要更多空间时，",
-    "startMs": 12122,
-    "endMs": 13780,
+    "text": "一块六十四字节的空闲空间，",
+    "startMs": 12874,
+    "endMs": 15349,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "才可能通过系统接口继续申请。",
-    "startMs": 13780,
-    "endMs": 17045,
+    "text": "被拆出三十二字节给小画。",
+    "startMs": 15349,
+    "endMs": 18168,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "图里的拆分和复用，",
-    "startMs": 17045,
-    "endMs": 18920,
+    "text": "已有空间不够时，",
+    "startMs": 18168,
+    "endMs": 19800,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "只是解释思路的简化模型；",
-    "startMs": 18920,
-    "endMs": 21395,
+    "text": "才可能向操作系统继续申请。",
+    "startMs": 19800,
+    "endMs": 22810,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "真实实现还要处理对齐、元数据和并发。",
-    "startMs": 21395,
-    "endMs": 25527,
+    "startMs": 22810,
+    "endMs": 26833,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

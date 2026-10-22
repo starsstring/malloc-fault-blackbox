@@ -1,0 +1,105 @@
+{
+  "opening": {
+    "grow": 2.262,
+    "move": 3.537,
+    "journey": 5.247
+  },
+  "background": {
+    "runtime": 5.54,
+    "unix": 7.606,
+    "lea": 11.318,
+    "standard": 18.206,
+    "library": 22.555,
+    "modern": 24.673,
+    "conclusion": 29.099
+  },
+  "contract": {
+    "size": 5.196,
+    "failure": 8.333,
+    "responsibility": 14.685
+  },
+  "inside": {
+    "allocator": 5.145,
+    "reuse": 9.685,
+    "split": 15.349,
+    "system": 18.168,
+    "details": 22.81
+  },
+  "virtual": {
+    "contiguous": 6.484,
+    "mapping": 11.114,
+    "demand": 13.856
+  },
+  "allocate": {
+    "size": 4.736,
+    "overflow": 8.601,
+    "request": 13.04,
+    "check": 15.438,
+    "success": 17.798
+  },
+  "initialize": {
+    "write": 5.744,
+    "read": 6.879,
+    "zero": 9.29,
+    "calloc": 11.369,
+    "failure": 14.099
+  },
+  "resize": {
+    "request": 2.286,
+    "inPlace": 5.655,
+    "move": 7.224,
+    "copy": 9.915,
+    "success": 12.16,
+    "invalid": 13.448,
+    "pointer": 14.902,
+    "tail": 16.56,
+    "write": 19.124
+  },
+  "failure": {
+    "branch": 0.641,
+    "failed": 5.578,
+    "keep": 7.389,
+    "temporary": 10.655,
+    "update": 12.887,
+    "wrong": 14.634,
+    "lost": 20.438
+  },
+  "release": {
+    "free": 3.691,
+    "noClear": 6.178,
+    "invalid": 13.907,
+    "null": 15.489,
+    "alias": 18.729
+  },
+  "mistakes": {
+    "leak": 7.338,
+    "useAfterFree": 8.818,
+    "doubleFree": 13.18,
+    "question": 18.895
+  },
+  "fragment": {
+    "request": 10.183,
+    "release": 12.67,
+    "merge": 14.571,
+    "extend": 18.168
+  },
+  "practice": {
+    "overflow": 2.874,
+    "check": 5.527,
+    "initialize": 8.091,
+    "resize": 12.058,
+    "free": 15.68
+  },
+  "tradeoff": {
+    "cost": 6.802,
+    "pool": 10.808,
+    "evaluate": 14.354
+  },
+  "closing": {
+    "move": 2.657,
+    "pointer": 6.293,
+    "allocate": 11.535,
+    "use": 12.861,
+    "free": 14.15
+  }
+}

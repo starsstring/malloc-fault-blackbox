@@ -26,7 +26,9 @@ async def main():
     for i,scene in enumerate(scenes):
         audio=OUT/(scene['id']+'.mp3')
         metadata=OUT/(scene['id']+'.words.json')
-        if audio.exists() and metadata.exists():
+        request_file=OUT/(scene['id']+'.request.json')
+        request={'text':scene['text'],'voice':VOICE,'rate':RATE,'pitch':'+0Hz'}
+        if audio.exists() and metadata.exists() and request_file.exists() and json.loads(request_file.read_text(encoding='utf-8'))==request:
             cached=json.loads(metadata.read_text(encoding='utf-8'))
             if normalized(''.join(w['text'] for w in cached))==normalized(scene['text']):
                 print('Keep '+scene['id'],flush=True);continue
@@ -41,6 +43,7 @@ async def main():
                 assert words,'No word timing received'
                 metadata.write_text(json.dumps(words,ensure_ascii=False,indent=2),encoding='utf-8')
                 audio.with_suffix('.mp3.part').replace(audio)
+                request_file.write_text(json.dumps(request,ensure_ascii=False,indent=2),encoding='utf-8')
                 print(f'{i+1}/15 {scene["id"]}: {audio.stat().st_size} bytes, {len(words)} word timings',flush=True)
                 break
             except Exception as error:

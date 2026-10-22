@@ -22,7 +22,7 @@ export const RemotionRoot = () => (
     <Composition
       id="MallocFilm"
       component={Movie}
-      durationInFrames={10100}
+      durationInFrames={9813}
       width={1920}
       height={1080}
       fps={30}
@@ -31,101 +31,101 @@ export const RemotionRoot = () => (
       <Composition
         id="Opening"
         component={Opening}
-        durationInFrames={506}
+        durationInFrames={273}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 16.866666666666667 }}
+        defaultProps={{ durationSeconds: 9.1 }}
       />
       <Composition
         id="Background"
         component={Background}
-        durationInFrames={885}
+        durationInFrames={1017}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 29.5 }}
+        defaultProps={{ durationSeconds: 33.9 }}
       />
       <Composition
         id="Contract"
         component={Contract}
-        durationInFrames={724}
+        durationInFrames={616}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 24.133333333333333 }}
+        defaultProps={{ durationSeconds: 20.533333333333335 }}
       />
       <Composition
         id="Inside"
         component={Inside}
-        durationInFrames={791}
+        durationInFrames={829}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 26.366666666666667 }}
+        defaultProps={{ durationSeconds: 27.633333333333333 }}
       />
       <Composition
         id="Virtual"
         component={Virtual}
-        durationInFrames={632}
+        durationInFrames={644}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 21.066666666666666 }}
+        defaultProps={{ durationSeconds: 21.466666666666665 }}
       />
       <Composition
         id="Allocate"
         component={Allocate}
-        durationInFrames={691}
+        durationInFrames={676}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 23.033333333333335 }}
+        defaultProps={{ durationSeconds: 22.533333333333335 }}
       />
       <Composition
         id="Initialize"
         component={Initialize}
-        durationInFrames={584}
+        durationInFrames={536}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 19.466666666666665 }}
+        defaultProps={{ durationSeconds: 17.866666666666667 }}
       />
       <Composition
         id="Resize"
         component={Resize}
-        durationInFrames={683}
+        durationInFrames={661}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 22.766666666666666 }}
+        defaultProps={{ durationSeconds: 22.033333333333335 }}
       />
       <Composition
         id="Failure"
         component={Failure}
-        durationInFrames={704}
+        durationInFrames={674}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 23.466666666666665 }}
+        defaultProps={{ durationSeconds: 22.466666666666665 }}
       />
       <Composition
         id="Release"
         component={Release}
-        durationInFrames={729}
+        durationInFrames={697}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 24.3 }}
+        defaultProps={{ durationSeconds: 23.233333333333334 }}
       />
       <Composition
         id="Mistakes"
         component={Mistakes}
-        durationInFrames={636}
+        durationInFrames={744}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 21.2 }}
+        defaultProps={{ durationSeconds: 24.8 }}
       />
       <Composition
         id="Fragment"
@@ -139,11 +139,11 @@ export const RemotionRoot = () => (
       <Composition
         id="Practice"
         component={Practice}
-        durationInFrames={683}
+        durationInFrames={645}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 22.766666666666666 }}
+        defaultProps={{ durationSeconds: 21.5 }}
       />
       <Composition
         id="Tradeoff"
@@ -157,11 +157,11 @@ export const RemotionRoot = () => (
       <Composition
         id="Closing"
         component={Closing}
-        durationInFrames={544}
+        durationInFrames={493}
         width={1920}
         height={1080}
         fps={30}
-        defaultProps={{ durationSeconds: 18.133333333333333 }}
+        defaultProps={{ durationSeconds: 16.433333333333334 }}
       />
     </Folder>
   </>

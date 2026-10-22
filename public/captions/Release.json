@@ -1,80 +1,96 @@
 [
   {
-    "text": "不再需要小画时，",
+    "text": "小画用完了，",
     "startMs": 641,
-    "endMs": 2223,
+    "endMs": 1929,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "就该释放这块空间了。",
-    "startMs": 2223,
-    "endMs": 4430,
+    "text": "就该释放空间。",
+    "startMs": 1929,
+    "endMs": 3690,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "free 结束的是对象的生命周期，",
-    "startMs": 4430,
-    "endMs": 7351,
+    "text": "free 结束对象的生命周期，",
+    "startMs": 3690,
+    "endMs": 6178,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "不承诺把内容清零，",
-    "startMs": 7351,
-    "endMs": 9303,
+    "text": "不承诺清零，",
+    "startMs": 6178,
+    "endMs": 7530,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也不保证马上归还操作系统。",
-    "startMs": 9303,
-    "endMs": 12402,
+    "startMs": 7530,
+    "endMs": 10668,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "释放以后，",
-    "startMs": 12402,
-    "endMs": 13576,
+    "startMs": 10668,
+    "endMs": 11815,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "即使某些颜色看起来还在，",
-    "startMs": 13576,
-    "endMs": 15948,
+    "text": "颜色即使看起来还在，",
+    "startMs": 11815,
+    "endMs": 13767,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "也不能继续读写。",
-    "startMs": 15948,
-    "endMs": 17887,
+    "text": "也不能再读写。",
+    "startMs": 13767,
+    "endMs": 15489,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "把一个指针设为空，",
-    "startMs": 17887,
-    "endMs": 19736,
+    "text": "把 p 设为空，",
+    "startMs": 15489,
+    "endMs": 16777,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
-    "text": "也不会自动修复指向旧对象的其他别名。",
-    "startMs": 19736,
-    "endMs": 23468,
+    "text": "只处理了这一个指针；",
+    "startMs": 16777,
+    "endMs": 18729,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "其他指向旧对象的别名，",
+    "startMs": 18729,
+    "endMs": 20948,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "仍然已经失效。",
+    "startMs": 20948,
+    "endMs": 22429,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

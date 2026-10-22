@@ -4,7 +4,7 @@ Run tools/generate_broadcast.py first. Caption text remains the reviewed
 script; phrase timing comes from provider WordBoundary metadata.
 """
 from pathlib import Path
-import argparse, html, json, math, os, re, shutil, subprocess, wave
+import html, json, math, os, re, shutil, subprocess, wave
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -17,16 +17,28 @@ FPS=30
 LEAD=18
 TRANSITION=15
 scenes=json.loads((ROOT/'narration.json').read_text(encoding='utf-8'))
-parser=argparse.ArgumentParser()
-parser.add_argument('--preview-available',action='store_true',help='Temporary layout review using only completed voice tracks')
-args=parser.parse_args()
-if args.preview_available:
-    scenes=[s for s in scenes if (ROOT/f'build/voice-broadcast/{s["id"]}.mp3').exists()]
+cue_definitions=json.loads((ROOT/'visual-cue-definitions.json').read_text(encoding='utf-8'))
 for folder in ['public/voice','public/captions','public/word-timing','build/voice-normalized']:
     (ROOT/folder).mkdir(parents=True,exist_ok=True)
 
 def normalized(text):
     return ''.join(c.casefold() for c in html.unescape(text) if c.isalnum())
+
+def visual_cues(scene,words):
+    script=normalized(scene['text']);spans=[];position=0
+    for word in words:
+        length=len(normalized(word['text']))
+        if length:spans.append((position,position+length,word['offset']/1e7,word['duration']/1e7))
+        position+=length
+    result={}
+    for name,phrase in cue_definitions[scene['kind']].items():
+        needle=normalized(phrase)
+        assert script.count(needle)==1,f'{scene["id"]}/{name}: landmark must be unique'
+        index=script.index(needle)
+        word=next(w for w in spans if w[0]<=index<w[1])
+        onset=word[2]+word[3]*(index-word[0])/(word[1]-word[0])
+        result[name]=round(max(0,onset+LEAD/FPS-.06),3)
+    return result
 
 def timed_captions(text, words, seconds):
     # Provider tokens must cover the exact script, ignoring punctuation/space.
@@ -72,13 +84,16 @@ for scene in scenes:
     captions=timed_captions(scene['text'],words,seconds)
     (ROOT/f'public/captions/{sid}.json').write_text(json.dumps(captions,ensure_ascii=False,indent=2),encoding='utf-8')
     frames=math.ceil(seconds*FPS)+42
-    item={**scene,'audioSeconds':round(seconds,6),'frames':frames,'from':offset,'durationSeconds':frames/FPS,'captions':captions}
+    cues=visual_cues(scene,words)
+    assert all(0<=time<frames/FPS for time in cues.values())
+    item={**scene,'audioSeconds':round(seconds,6),'frames':frames,'from':offset,'durationSeconds':frames/FPS,'captions':captions,'visualCues':cues}
     timeline.append(item)
     for caption in captions:srt.append({**caption,'startMs':caption['startMs']+round(offset/FPS*1000),'endMs':caption['endMs']+round(offset/FPS*1000)})
     offset+=frames-TRANSITION
     print(f'{sid}: {seconds:.2f}s, {len(captions)} caption pages',flush=True)
 total=offset+TRANSITION
 (ROOT/'build/timeline.json').write_text(json.dumps({'fps':FPS,'transitionFrames':TRANSITION,'durationInFrames':total,'scenes':timeline},ensure_ascii=False,indent=2),encoding='utf-8')
+(ROOT/'src/visual-cues.json').write_text(json.dumps({s['kind']:s['visualCues'] for s in timeline},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 shutil.copyfile(ROOT/'build/voice-broadcast/provider.json',ROOT/'配音参数.json')
 
 def stamp(ms):
