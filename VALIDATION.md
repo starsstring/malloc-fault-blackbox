@@ -1,27 +1,21 @@
-# 验证记录
+# 成片验证记录
 
-## Windows 阶段
+核对日期：2026-10-22。
 
-2026-10-21，Windows x64 / TinyCC 0.9.27，本机编译及全部 31 项行为检查通过。
-完整日志见 [verification.txt](blackbox_demo/verification.txt)，三种场景见 [blackbox_demo](blackbox_demo)。
-`docs/` 中 Word、PDF 与 Markdown 报告是在这一阶段整理的版本。
+- 最终成片：`video/malloc-film.mp4`，15,780,526 字节，约 5 分 10 秒。
+- Remotion 实际渲染 9,299 帧；FFmpeg 全片音视频解码检查通过，实际解码帧数 9,299，无错误输出。
+- H.264，1920 × 1080，30 fps，YUV420P / BT.709；AAC，48 kHz，双声道。
+- 音频检测最大采样电平 -2.4 dBFS，平均采样电平 -19.5 dBFS；没有把平均电平称为 LUFS。
+- 15 个章节、147 条字幕；字幕与讲稿内容逐字对应，各章字幕时间严格递增，单条最长 26 字符。
+- 从最终 MP4 抽取并检查 19 张代表性画面，覆盖所有章节及扩容后段、悬空别名、碎片合并；未发现明显文字溢出或字幕遮挡。
+- 使用本地 Whisper base 对 15 段原始配音进行辅助转写检查，未发现明显缺句或异常重复。自动识别存在同音字、繁简和英文术语误差，没有把识别文字直接替换为字幕，也不据此声称逐字对齐。
+- `pnpm lint` 通过，包含 ESLint 与 TypeScript 检查。
+- 最小 C 示例使用 Windows TinyCC 0.9.27 实际编译运行，验证 8 像素申请、扩到 16 像素、旧内容保留、新内容初始化和最终释放的正常路径。
 
-## GitHub Linux 阶段
+本次没有在鲁班猫开发板上运行，也没有模拟真实 glibc 的完整内部布局。分配失败分支、碎片场景和地址由动画表达，不构成真实设备故障或时延测量证据。
 
-上传代码后新增 Linux 验证。源代码提交为 `9933916bd5b6bcba2ad2ddafb0eb80d997d27b72`，对应 [Actions 运行](https://github.com/starsstring/malloc-fault-blackbox/actions/runs/39547435366)。
+最终 MP4 SHA-256：
 
-| 环境 | 执行内容 | 结果 |
-| --- | --- | --- |
-| Ubuntu 24.04 / GCC | C11 严格警告编译，31 项行为检查 | 通过 |
-| Ubuntu 24.04 / Clang | C11 严格警告编译，31 项行为检查 | 通过 |
-| Ubuntu 24.04 / GCC ASan 与 UBSan | 地址和未定义行为诊断构建，31 项行为检查 | 通过 |
+`bfb9592bb2845a3191117d68ca5683a38213b3dd5df05ced1b39eeacffa947ef`
 
-三个任务均通过 `sha256sum -c MANIFEST.sha256`，公开文件哈希与该提交的清单一致。
-GCC、Clang 和 sanitizer 任务的成功状态已通过 GitHub Actions API 核对。
-
-这些结果补充了报告成稿时尚未具备的 Linux 证据。运行记录是特定环境与测试输入的证据，不证明不存在任何其他缺陷。
-
-## 尚未验证
-
-鲁班猫开发板、真实外接传感器、真实断电、DMA 和硬实时延迟均未验证。
-GitHub 公开仓库已建立，课程平台中的提交仍未执行。
+复核脚本：`tools/verify_video.py`。该脚本依赖 FFmpeg，必要时通过 `FFMPEG_BINARY` 指定路径。重渲染可能因编码器或字体版本产生不同哈希。

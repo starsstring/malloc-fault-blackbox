@@ -1,0 +1,90 @@
+[
+  {
+    "text": "画到一半，",
+    "startMs": 640,
+    "endMs": 1522,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "八格不够了。",
+    "startMs": 1522,
+    "endMs": 2490,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "那就用 realloc 试着扩到十六格。",
+    "startMs": 2490,
+    "endMs": 5380,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "它可能原地调整，",
+    "startMs": 5380,
+    "endMs": 7060,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "也可能把原来的内容搬到新位置。",
+    "startMs": 7060,
+    "endMs": 9760,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "成功后，",
+    "startMs": 9760,
+    "endMs": 10231,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "旧对象就失效了，",
+    "startMs": 10231,
+    "endMs": 12150,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "要使用返回的新指针。",
+    "startMs": 12150,
+    "endMs": 13850,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "旧范围的内容会保留，",
+    "startMs": 13850,
+    "endMs": 15630,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "新增加的格子，",
+    "startMs": 15630,
+    "endMs": 16699,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "则需要我们继续初始化。",
+    "startMs": 16699,
+    "endMs": 18757,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  }
+]

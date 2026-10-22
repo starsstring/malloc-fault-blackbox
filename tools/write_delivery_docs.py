@@ -1,0 +1,73 @@
+from pathlib import Path
+import json
+
+root=Path(__file__).resolve().parents[1]
+timeline=json.loads((root/'build/timeline.json').read_text(encoding='utf-8'))
+assert len(timeline['scenes'])==15
+fps=timeline['fps'];seconds=timeline['durationInFrames']/fps
+def clock(s):return f'{int(s)//60:02}:{int(s)%60:02}'
+chapters='\n'.join(f'| {clock(s["from"]/fps)} | {s["title"]} |' for s in timeline['scenes'])
+readme=f'''# malloc 的一生：一张会长大的像素画
+
+一部约 {clock(round(seconds))} 的中文动画讲解视频，以一张从 8 格增长到 16 格的像素画，串起动态内存的背景、机制与正确用法。
+
+[观看 / 下载 1080p 成片](video/malloc-film.mp4) · [字幕](malloc的一生.srt) · [完整讲稿](讲解文稿.md) · [参考资料](参考资料.md)
+
+![视频封面](poster.png)
+
+## 作品内容
+
+采用 Remotion 绘制连续动画，配有温柔自然的女声解说和中文字幕。像素逐格上色、扩容搬迁、失败保留原图、释放后禁止访问；进一步展示虚拟页映射、空闲块拆分与碎片合并。
+
+| 开始时间 | 章节 |
+| --- | --- |
+{chapters}
+
+这里的“创意案例”是贯穿全片的像素画叙事与动画演示。观看和渲染均不依赖鲁班猫开发板；随附的最小 C 示例也可以在普通电脑或 Linux 上运行。
+
+## 直接使用
+
+播放 `video/malloc-film.mp4` 即可。分辨率 1920 × 1080，30 fps，H.264 视频、AAC 音频；字幕已经烧录进画面，同时提供可独立使用的 SRT 文件。
+
+## 编辑与重新渲染
+
+工程已经包含本次完整配音，重新渲染不需要调用语音服务或下载语音模型。
+
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+pnpm lint
+pnpm render
+```
+
+使用 Node.js 22.13+ 或 24，依赖版本锁定在 `pnpm-lock.yaml`。首次导出时 Remotion 可能需要下载 Chrome Headless Shell。画面中文字体依赖本机字体，跨系统应检查排版。
+
+主合成是 `MallocFilm`；`Scenes` 文件夹内有 15 个独立章节，可以在 Studio 中逐章查看。
+
+| 文件 | 用途 |
+| --- | --- |
+| `src/Visuals.tsx` | 图解、像素运动和各章视觉 |
+| `src/Scenes.tsx` | 逐章配音、字幕与场景连接 |
+| `src/Movie.tsx` | 主时间轴和转场 |
+| `narration.json` | 解说文稿 |
+| `public/voice/` | 已生成的女声配音 |
+| `public/captions/` | 每章字幕时间 |
+| `examples/pixels.c` | 防溢出、判空、初始化、安全扩容和释放的最小示例 |
+
+如需修改讲稿并重新生成声音，可参考 `tools/generate-voice.mjs`。在线演示可能有服务与额度限制；修改后需重新核对配音和字幕。`tools/assemble.py` 使用 FFmpeg 和 NumPy，从原始 WAV 构建规范化音频、字幕及场景节点。
+
+## 最小 C 示例
+
+```sh
+cc -std=c11 -Wall -Wextra -Wpedantic examples/pixels.c -o pixels
+./pixels
+```
+
+本次正常路径使用 Windows TinyCC 实际编译并运行。动画中的分配失败、碎片和地址是教学示意，没有用未定义行为程序制造画面，也没有声称测量了开发板时延。详见 [验证记录](VALIDATION.md)。
+
+技术边界与来源见 [参考资料](参考资料.md)，AI 辅助、配音和第三方组件说明见 [制作说明](制作说明.md)。
+'''
+(root/'README.md').write_text(readme,encoding='utf-8')
+(root/'讲解文稿.md').write_text('# malloc 的一生：讲解文稿\n\n'+'\n\n'.join(f'## {i+1:02} · {s["title"]}\n\n{s["text"]}' for i,s in enumerate(timeline['scenes']))+'\n',encoding='utf-8')
+(root/'制作时间轴.json').write_text(json.dumps({k:v for k,v in timeline.items()},ensure_ascii=False,indent=2),encoding='utf-8')
+print(f'Delivery docs written: {clock(seconds)}, 15 chapters.')

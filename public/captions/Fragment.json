@@ -1,0 +1,82 @@
+[
+  {
+    "text": "再看一个受限区域。",
+    "startMs": 600,
+    "endMs": 2110,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "两块三十二字节的空闲空间，",
+    "startMs": 2110,
+    "endMs": 4631,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "被正在使用的块隔开。",
+    "startMs": 4631,
+    "endMs": 6540,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "总量虽然够，",
+    "startMs": 6540,
+    "endMs": 7510,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "却放不下一块四十八字节的连续请求。",
+    "startMs": 7510,
+    "endMs": 10520,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "如果中间块被释放，",
+    "startMs": 10520,
+    "endMs": 12309,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "相邻空闲块就可能合并。",
+    "startMs": 12309,
+    "endMs": 14320,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "当然，",
+    "startMs": 14320,
+    "endMs": 15120,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "实际分配器还可能向系统申请新空间，",
+    "startMs": 15120,
+    "endMs": 18310,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "不能只看这张图就断言 malloc 一定失败。",
+    "startMs": 18310,
+    "endMs": 21239,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  }
+]

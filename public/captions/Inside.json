@@ -1,0 +1,82 @@
+[
+  {
+    "text": "一次 malloc，",
+    "startMs": 600,
+    "endMs": 1800,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "不一定要惊动操作系统。",
+    "startMs": 1800,
+    "endMs": 3940,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "以常见的 glibc 为例，",
+    "startMs": 3940,
+    "endMs": 6320,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "程序先找 C 库里的分配器，",
+    "startMs": 6320,
+    "endMs": 9000,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "它会尝试复用缓存和空闲空间。",
+    "startMs": 9000,
+    "endMs": 12140,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "需要更多空间时，",
+    "startMs": 12140,
+    "endMs": 14040,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "才可能通过系统接口继续申请。",
+    "startMs": 14040,
+    "endMs": 16820,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "图里的拆分和复用，",
+    "startMs": 16820,
+    "endMs": 18770,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "只是解释思路的简化模型；",
+    "startMs": 18770,
+    "endMs": 21170,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "真实实现还要处理对齐、元数据和并发。",
+    "startMs": 21170,
+    "endMs": 25328,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  }
+]

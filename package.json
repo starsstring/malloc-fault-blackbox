@@ -1,0 +1,41 @@
+{
+  "name": "malloc-remotion",
+  "version": "1.0.0",
+  "description": "Malloc 的一生：一张会长大的像素画，中文动画讲解视频",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starsstring/malloc-fault-blackbox.git"
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@remotion/captions": "4.0.537",
+    "@remotion/cli": "4.0.537",
+    "@remotion/media": "4.0.537",
+    "@remotion/transitions": "4.0.537",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.537"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.537",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render src/index.ts MallocFilm video/malloc-film.mp4 --port=3105 --codec=h264 --crf=20 --x264-preset=fast --audio-bitrate=192k --image-format=png --pixel-format=yuv420p --color-space=bt709",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}

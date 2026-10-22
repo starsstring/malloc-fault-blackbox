@@ -1,0 +1,98 @@
+[
+  {
+    "text": "有些大小，",
+    "startMs": 600,
+    "endMs": 1526,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "写代码的时候还不知道。",
+    "startMs": 1526,
+    "endMs": 3020,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "比如用户会输入多长的文字，",
+    "startMs": 3020,
+    "endMs": 5550,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "一张图片要存多少个像素。",
+    "startMs": 5550,
+    "endMs": 8040,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "动态内存分配，",
+    "startMs": 8040,
+    "endMs": 9480,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "就是把申请空间的决定留到运行时。",
+    "startMs": 9480,
+    "endMs": 12920,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "这个想法早于 Linux，",
+    "startMs": 12920,
+    "endMs": 15030,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "早期 Unix 就有分配器。",
+    "startMs": 15030,
+    "endMs": 17270,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "一九八七年，",
+    "startMs": 17270,
+    "endMs": 18840,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "Doug Lea 开始编写自己的实现；",
+    "startMs": 18840,
+    "endMs": 21210,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "后来和今天的各种 C 库，",
+    "startMs": 21210,
+    "endMs": 22868,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "也一直在改进分配策略。",
+    "startMs": 22868,
+    "endMs": 25030,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  }
+]

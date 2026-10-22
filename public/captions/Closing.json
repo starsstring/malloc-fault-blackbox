@@ -1,0 +1,82 @@
+[
+  {
+    "text": "现在回到开头。",
+    "startMs": 640,
+    "endMs": 2480,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "小画变大了，",
+    "startMs": 2480,
+    "endMs": 3870,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "地址可能改变，",
+    "startMs": 3870,
+    "endMs": 5630,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "扩容也可能失败。",
+    "startMs": 5630,
+    "endMs": 7430,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "理解 malloc，",
+    "startMs": 7430,
+    "endMs": 8421,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "不只是记住怎么申请空间，",
+    "startMs": 8421,
+    "endMs": 10900,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "更是管理对象的一生：",
+    "startMs": 10900,
+    "endMs": 13160,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "申请有依据，",
+    "startMs": 13160,
+    "endMs": 14720,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "使用有边界，",
+    "startMs": 14720,
+    "endMs": 16270,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  },
+  {
+    "text": "释放有归属。",
+    "startMs": 16270,
+    "endMs": 17826,
+    "timestampMs": null,
+    "confidence": null,
+    "pageBreakAfter": true
+  }
+]
