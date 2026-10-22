@@ -24,7 +24,6 @@ const C = {
   rust: "#bc6245",
   mint: "#547e70",
   pale: "#e3e9df",
-  dark: "#142a2c",
   white: "#f7f5ef",
   red: "#ce6e5b",
 };
@@ -92,16 +91,15 @@ const Code: React.FC<{
   y?: number;
   width?: number;
   active?: number;
-  dark?: boolean;
-}> = ({ lines, x = 140, y = 620, width = 1180, active = 0, dark = false }) => (
+}> = ({ lines, x = 140, y = 620, width = 1180, active = 0 }) => (
   <div
     style={{
       ...position(x, y),
       width,
       padding: "26px 34px",
       borderRadius: 16,
-      background: dark ? "#203c3d" : "#e9e8e0",
-      border: `1px solid ${dark ? "#39514c" : "#dadcd1"}`,
+      background: "#e9e8e0",
+      border: "1px solid #dadcd1",
     }}
   >
     {lines.map((line, i) => (
@@ -112,9 +110,8 @@ const Code: React.FC<{
           fontSize: 35,
           lineHeight: 1.65,
           letterSpacing: -0.7,
-          color: dark ? "#e7eee4" : C.ink,
-          background:
-            i === active ? (dark ? "#345a51" : "#d6e0d2") : "transparent",
+          color: C.ink,
+          background: i === active ? "#d6e0d2" : "transparent",
           borderRadius: 5,
           padding: "0 12px",
           whiteSpace: "pre",
@@ -126,17 +123,14 @@ const Code: React.FC<{
   </div>
 );
 
-const Note: React.FC<{ children: React.ReactNode; dark?: boolean }> = ({
-  children,
-  dark = false,
-}) => (
+const Note: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div
     style={{
       ...position(120, 825),
       fontFamily: sans,
       fontSize: 24,
       lineHeight: 1.5,
-      color: dark ? "#9aaea6" : C.soft,
+      color: C.soft,
       maxWidth: 1670,
     }}
   >
@@ -144,17 +138,14 @@ const Note: React.FC<{ children: React.ReactNode; dark?: boolean }> = ({
   </div>
 );
 
-const Kicker: React.FC<{ children: React.ReactNode; dark?: boolean }> = ({
-  children,
-  dark = false,
-}) => (
+const Kicker: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div
     style={{
       ...position(125, 92),
       fontFamily: mono,
       fontSize: 27,
       letterSpacing: 4,
-      color: dark ? "#a5c5b7" : C.rust,
+      color: C.rust,
     }}
   >
     {children}
@@ -307,17 +298,15 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const u = frame / (duration * fps);
-  const dark = kind === "inside" || kind === "resize" || kind === "release";
   const enter = interpolate(frame, [0, 0.65 * fps], [0, 1], clamp);
-  const ink = dark ? C.white : C.ink;
   return (
     <div
       style={{
         position: "absolute",
         inset: 0,
         overflow: "hidden",
-        background: dark ? C.dark : C.paper,
-        color: ink,
+        background: C.paper,
+        color: C.ink,
         fontFamily: sans,
       }}
     >
@@ -329,9 +318,7 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
           left: 900,
           top: -240,
           borderRadius: "50%",
-          background: dark
-            ? "radial-gradient(circle,#31534855 0%,transparent 68%)"
-            : "radial-gradient(circle,#e4ddce88 0%,transparent 68%)",
+          background: "radial-gradient(circle,#e4ddce88 0%,transparent 68%)",
         }}
       />
       <div
@@ -516,8 +503,8 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
         )}
         {kind === "inside" && (
           <>
-            <Kicker dark>03 / INSIDE THE ALLOCATOR</Kicker>
-            <Word x={125} y={205} size={103} weight={600} color={C.white}>
+            <Kicker>03 / INSIDE THE ALLOCATOR</Kicker>
+            <Word x={125} y={205} size={103} weight={600} color={C.ink}>
               先复用。
               <br />
               再考虑找系统。
@@ -527,14 +514,12 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
                 ...position(1000, 226),
                 width: 740,
                 height: 445,
-                border: "1px solid #4d6f63",
+                border: "1px solid #bdcbbb",
                 borderRadius: 22,
                 padding: 42,
               }}
             >
-              <div
-                style={{ ...txt(46, { color: "#d3e5d4" }), marginBottom: 50 }}
-              >
+              <div style={{ ...txt(46, { color: C.ink }), marginBottom: 50 }}>
                 C 库分配器
               </div>
               <div style={{ display: "flex", height: 112, gap: 8 }}>
@@ -591,11 +576,11 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
                   style={{ width: 190, background: "#749380", borderRadius: 7 }}
                 />
               </div>
-              <div style={{ ...txt(31, { color: "#a4baaa" }), marginTop: 40 }}>
+              <div style={{ ...txt(31, { color: C.soft }), marginTop: 40 }}>
                 缓存 / 空闲块 / 管理元数据
               </div>
             </div>
-            <Word x={1075} y={760} size={47} color={"#a5b8aa"}>
+            <Word x={1075} y={760} size={47} color={C.soft}>
               操作系统 · brk / mmap 等
             </Word>
             <Arrow
@@ -603,7 +588,7 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
               y1={690}
               x2={1380}
               y2={740}
-              color={"#9cb8a5"}
+              color={C.mint}
               progress={interpolate(
                 frame,
                 [duration * 0.5 * fps, duration * 0.53 * fps],
@@ -611,7 +596,7 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
                 clamp,
               )}
             />
-            <Note dark>
+            <Note>
               以常见 glibc 为例。示意图忽略对齐、元数据尺寸和并发细节。
             </Note>
           </>
@@ -783,14 +768,14 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
         )}
         {kind === "resize" && (
           <>
-            <Kicker dark>07 / REALLOC · THE MOVE</Kicker>
-            <Word x={122} y={193} size={103} weight={600} color={C.white}>
+            <Kicker>07 / REALLOC · THE MOVE</Kicker>
+            <Word x={122} y={193} size={103} weight={600} color={C.ink}>
               长大，可能要搬家。
             </Word>
-            <Word x={183} y={370} size={38} color={"#9cb3a6"}>
+            <Word x={183} y={370} size={38} color={C.soft}>
               原对象 · 32 B
             </Word>
-            <Word x={1270} y={370} size={38} color={"#9cb3a6"}>
+            <Word x={1270} y={370} size={38} color={C.soft}>
               新对象 · 64 B
             </Word>
             <Grid x={165} y={445} size={69} count={8} mode="unknown" />
@@ -856,10 +841,10 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
             ))}
             {u > 0.65 ? (
               <>
-                <Word x={177} y={692} size={40} color={"#799087"}>
+                <Word x={177} y={692} size={40} color={C.soft}>
                   旧对象失效
                 </Word>
-                <Word x={670} y={738} size={40} color={"#d9e1d2"}>
+                <Word x={670} y={738} size={40} color={C.ink}>
                   成功返回后：p = tmp
                 </Word>
               </>
@@ -869,16 +854,16 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
                 y1={528}
                 x2={1120}
                 y2={528}
-                color={"#d3b893"}
+                color={C.mint}
                 progress={interpolate(frame, [2 * fps, 3 * fps], [0, 1], clamp)}
               />
             )}
             {u > 0.8 && (
-              <Word x={1220} y={777} size={28} color={"#a4baaa"}>
+              <Word x={1220} y={777} size={28} color={C.soft}>
                 新增格子：先写入，再读取
               </Word>
             )}
-            <Note dark>
+            <Note>
               只展示搬迁这一可能路径。realloc
               也可能原地完成；新增区域仍须初始化。
             </Note>
@@ -922,8 +907,8 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
         )}
         {kind === "release" && (
           <>
-            <Kicker dark>09 / RETURN OWNERSHIP</Kicker>
-            <Word x={123} y={195} size={112} weight={600} color={C.white}>
+            <Kicker>09 / RETURN OWNERSHIP</Kicker>
+            <Word x={123} y={195} size={112} weight={600} color={C.ink}>
               归还使用权。
               <br />
               不是擦除内容。
@@ -936,11 +921,11 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
                   width: 445,
                   height: 100,
                   ...txt(60, {
-                    color: "#e8b697",
+                    color: C.rust,
                     fontWeight: 600,
                     textAlign: "center",
                   }),
-                  background: "#142a2ce8",
+                  background: "#f5f2ebf5",
                   borderTop: "2px solid #b68565",
                   borderBottom: "2px solid #b68565",
                 }}
@@ -954,14 +939,13 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
               y={602}
               width={930}
               active={u < 0.55 ? 0 : 1}
-              dark
             />
             {u > 0.7 && (
-              <Word x={1220} y={747} size={33} color={"#e8b697"}>
+              <Word x={1220} y={747} size={33} color={C.rust}>
                 别名 q 仍悬空，不能继续使用
               </Word>
             )}
-            <Note dark>
+            <Note>
               free
               不承诺清零或立即归还操作系统；置空一个指针不能修复其他悬空别名。
             </Note>
@@ -1219,14 +1203,14 @@ export const SceneArt: React.FC<{ kind: Kind; duration: number }> = ({
           right: 120,
           top: 883,
           height: 2,
-          background: dark ? "#426154" : "#d4d9ce",
+          background: "#d4d9ce",
         }}
       >
         <div
           style={{
             height: 2,
             width: `${Math.min(1, u) * 100}%`,
-            background: dark ? "#b9cdb9" : C.rust,
+            background: C.rust,
           }}
         />
       </div>

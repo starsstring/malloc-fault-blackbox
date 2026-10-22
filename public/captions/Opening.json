@@ -1,64 +1,64 @@
 [
   {
     "text": "一张像素画，",
-    "startMs": 600,
-    "endMs": 1714,
+    "startMs": 641,
+    "endMs": 1878,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "从八格长到十六格。",
-    "startMs": 1714,
-    "endMs": 3590,
+    "startMs": 1878,
+    "endMs": 4111,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "原来的内存地址，",
-    "startMs": 3590,
-    "endMs": 4956,
+    "startMs": 4111,
+    "endMs": 5642,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "还能继续用吗？",
-    "startMs": 4956,
-    "endMs": 6270,
+    "startMs": 5642,
+    "endMs": 7351,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "先别急着记函数名。",
-    "startMs": 6270,
-    "endMs": 8460,
+    "startMs": 7351,
+    "endMs": 9736,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "我们跟着这张小画，",
-    "startMs": 8460,
-    "endMs": 10180,
+    "startMs": 9736,
+    "endMs": 11344,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "看看空间怎样被申请、扩容，",
-    "startMs": 10180,
-    "endMs": 12590,
+    "startMs": 11344,
+    "endMs": 14226,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "又该在什么时候释放。",
-    "startMs": 12590,
-    "endMs": 13972,
+    "startMs": 14226,
+    "endMs": 16024,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

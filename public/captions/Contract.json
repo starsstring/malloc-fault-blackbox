@@ -1,80 +1,80 @@
 [
   {
     "text": "我们先看最基本的约定。",
-    "startMs": 620,
-    "endMs": 2230,
+    "startMs": 641,
+    "endMs": 3053,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "对非零大小的申请，",
-    "startMs": 2230,
-    "endMs": 4269,
+    "startMs": 3053,
+    "endMs": 4864,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "malloc 返回一块满足大小和基本对齐要求的空间，",
-    "startMs": 4269,
-    "endMs": 8130,
+    "startMs": 4864,
+    "endMs": 9341,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "失败就返回空指针。",
-    "startMs": 8130,
-    "endMs": 9860,
+    "startMs": 9341,
+    "endMs": 11637,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "不过，",
-    "startMs": 9860,
-    "endMs": 10650,
+    "startMs": 11637,
+    "endMs": 12415,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "拿到空间不等于拿到了有效数据。",
-    "startMs": 10650,
-    "endMs": 13100,
+    "startMs": 12415,
+    "endMs": 15910,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "它不会初始化内容，",
-    "startMs": 13100,
-    "endMs": 14840,
+    "startMs": 15910,
+    "endMs": 17670,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也不会帮你决定什么时候释放。",
-    "startMs": 14840,
-    "endMs": 17150,
+    "startMs": 17670,
+    "endMs": 20693,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "这些事，",
-    "startMs": 17150,
-    "endMs": 18210,
+    "startMs": 20693,
+    "endMs": 21650,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "仍然由程序负责。",
-    "startMs": 18210,
-    "endMs": 19541,
+    "startMs": 21650,
+    "endMs": 23322,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

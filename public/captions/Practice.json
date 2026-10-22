@@ -1,88 +1,88 @@
 [
   {
     "text": "把这些步骤连起来，",
-    "startMs": 620,
-    "endMs": 2210,
+    "startMs": 641,
+    "endMs": 2223,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "就有了一条完整路径：",
-    "startMs": 2210,
-    "endMs": 3370,
+    "startMs": 2223,
+    "endMs": 4136,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "大小计算要防溢出，",
-    "startMs": 3370,
-    "endMs": 5150,
+    "startMs": 4136,
+    "endMs": 5947,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "申请之后要判空，",
-    "startMs": 5150,
-    "endMs": 6580,
+    "startMs": 5947,
+    "endMs": 7657,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "读取之前先初始化，",
-    "startMs": 6580,
-    "endMs": 8400,
+    "startMs": 7657,
+    "endMs": 9634,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "访问始终守住边界。",
-    "startMs": 8400,
-    "endMs": 10020,
+    "startMs": 9634,
+    "endMs": 11969,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "扩容使用临时指针，",
-    "startMs": 10020,
-    "endMs": 11820,
+    "startMs": 11969,
+    "endMs": 13895,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "失败分支保留清楚的所有权。",
-    "startMs": 11820,
-    "endMs": 14230,
+    "startMs": 13895,
+    "endMs": 17071,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "最后，",
-    "startMs": 14230,
-    "endMs": 14559,
+    "startMs": 17071,
+    "endMs": 17887,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "让仍由程序拥有的每一块空间，",
-    "startMs": 14559,
-    "endMs": 17085,
+    "startMs": 17887,
+    "endMs": 20387,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "恰好释放一次。",
-    "startMs": 17085,
-    "endMs": 18301,
+    "startMs": 20387,
+    "endMs": 21917,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

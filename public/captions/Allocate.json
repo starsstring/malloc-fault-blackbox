@@ -1,80 +1,80 @@
 [
   {
     "text": "现在给小画准备八个格子。",
-    "startMs": 600,
-    "endMs": 2810,
+    "startMs": 641,
+    "endMs": 3525,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "我们用三十二位无符号整数表示像素，",
-    "startMs": 2810,
-    "endMs": 5760,
+    "startMs": 3525,
+    "endMs": 7109,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "在这个例子里，",
-    "startMs": 5760,
-    "endMs": 7150,
+    "startMs": 7109,
+    "endMs": 8372,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "每个像素占四字节，",
-    "startMs": 7150,
-    "endMs": 8860,
+    "startMs": 8372,
+    "endMs": 10247,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "一共需要三十二字节。",
-    "startMs": 8860,
-    "endMs": 10660,
+    "startMs": 10247,
+    "endMs": 12606,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "先检查数量乘以元素大小会不会溢出，",
-    "startMs": 10660,
-    "endMs": 14564,
+    "startMs": 12606,
+    "endMs": 16242,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "再申请，",
-    "startMs": 14564,
-    "endMs": 15272,
+    "startMs": 16242,
+    "endMs": 17185,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "紧接着判空。",
-    "startMs": 15272,
-    "endMs": 16460,
+    "startMs": 17185,
+    "endMs": 18818,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "别跳过这一步：",
-    "startMs": 16460,
-    "endMs": 17780,
+    "startMs": 18818,
+    "endMs": 20196,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "空指针不能拿来画画。",
-    "startMs": 17780,
-    "endMs": 19623,
+    "startMs": 20196,
+    "endMs": 22198,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

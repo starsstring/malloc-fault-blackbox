@@ -1,88 +1,88 @@
 [
   {
     "text": "如果扩容没成功呢？",
-    "startMs": 620,
-    "endMs": 2220,
+    "startMs": 641,
+    "endMs": 2772,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "对这里的非零请求，",
-    "startMs": 2220,
-    "endMs": 4030,
+    "startMs": 2772,
+    "endMs": 4596,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "失败会返回空指针，",
-    "startMs": 4030,
-    "endMs": 5620,
+    "startMs": 4596,
+    "endMs": 6777,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "但原来的对象仍然有效。",
-    "startMs": 5620,
-    "endMs": 7800,
+    "startMs": 6777,
+    "endMs": 9367,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "所以，",
-    "startMs": 7800,
-    "endMs": 8750,
+    "startMs": 9367,
+    "endMs": 10247,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "先用临时指针接住结果，",
-    "startMs": 8750,
-    "endMs": 11110,
+    "startMs": 10247,
+    "endMs": 12479,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "成功了再更新。",
-    "startMs": 11110,
-    "endMs": 12610,
+    "startMs": 12479,
+    "endMs": 14226,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "直接覆盖原指针，",
-    "startMs": 12610,
-    "endMs": 14370,
+    "startMs": 14226,
+    "endMs": 15948,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "就可能在失败时丢掉原块的唯一引用。",
-    "startMs": 14370,
-    "endMs": 17520,
+    "startMs": 15948,
+    "endMs": 19813,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "小画还在，",
-    "startMs": 17520,
-    "endMs": 18770,
+    "startMs": 19813,
+    "endMs": 20999,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "却再也找不到它了。",
-    "startMs": 18770,
-    "endMs": 20081,
+    "startMs": 20999,
+    "endMs": 22631,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

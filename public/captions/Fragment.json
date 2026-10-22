@@ -1,80 +1,80 @@
 [
   {
     "text": "再看一个受限区域。",
-    "startMs": 600,
-    "endMs": 2110,
+    "startMs": 641,
+    "endMs": 2772,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "两块三十二字节的空闲空间，",
-    "startMs": 2110,
-    "endMs": 4631,
+    "startMs": 2772,
+    "endMs": 5463,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "被正在使用的块隔开。",
-    "startMs": 4631,
-    "endMs": 6540,
+    "startMs": 5463,
+    "endMs": 7785,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "总量虽然够，",
-    "startMs": 6540,
-    "endMs": 7510,
+    "startMs": 7785,
+    "endMs": 9060,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "却放不下一块四十八字节的连续请求。",
-    "startMs": 7510,
-    "endMs": 10520,
+    "startMs": 9060,
+    "endMs": 12670,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "如果中间块被释放，",
-    "startMs": 10520,
-    "endMs": 12309,
+    "startMs": 12670,
+    "endMs": 14571,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "相邻空闲块就可能合并。",
-    "startMs": 12309,
-    "endMs": 14320,
+    "startMs": 14571,
+    "endMs": 17351,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "当然，",
-    "startMs": 14320,
-    "endMs": 15120,
+    "startMs": 17351,
+    "endMs": 18168,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "实际分配器还可能向系统申请新空间，",
-    "startMs": 15120,
-    "endMs": 18310,
+    "startMs": 18168,
+    "endMs": 21854,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "不能只看这张图就断言 malloc 一定失败。",
-    "startMs": 18310,
-    "endMs": 21239,
+    "startMs": 21854,
+    "endMs": 25884,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

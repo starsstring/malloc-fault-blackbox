@@ -1,0 +1,9 @@
+{
+  "provider": "Microsoft Edge online TTS",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "-2%",
+  "pitch": "+0Hz",
+  "postProcessingPlaybackRate": 1.0,
+  "delivery": "steady female Chinese explanatory narration; default voice style, not Azure newscast SSML",
+  "wordTiming": "provider WordBoundary metadata"
+}

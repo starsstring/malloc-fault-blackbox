@@ -1,10 +1,10 @@
-"""Normalize narration and author explicit, editable Remotion scene nodes.
+"""Normalize narration and author explicit Remotion scenes with word timing.
 
-Run after build/voice-raw/*.wav is complete. Captions follow the reviewed
-script, with phrase boundaries fitted to detected pauses (not word-level ASR).
+Run tools/generate_broadcast.py first. Caption text remains the reviewed
+script; phrase timing comes from provider WordBoundary metadata.
 """
 from pathlib import Path
-import argparse, json, math, os, re, shutil, subprocess, wave
+import argparse, html, json, math, os, re, shutil, subprocess, wave
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -21,73 +21,55 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--preview-available',action='store_true',help='Temporary layout review using only completed voice tracks')
 args=parser.parse_args()
 if args.preview_available:
-    scenes=[s for s in scenes if (ROOT/f'build/voice-raw/{s["id"]}.wav').exists()]
-for folder in ['public/voice','public/captions','build/voice-normalized']:
+    scenes=[s for s in scenes if (ROOT/f'build/voice-broadcast/{s["id"]}.mp3').exists()]
+for folder in ['public/voice','public/captions','public/word-timing','build/voice-normalized']:
     (ROOT/folder).mkdir(parents=True,exist_ok=True)
 
-def weight(text):
-    return len(re.sub(r'[A-Za-z0-9_]+|\W','',text))+sum(max(1.6,len(w)*.42) for w in re.findall(r'[A-Za-z0-9_]+',text))+.5
+def normalized(text):
+    return ''.join(c.casefold() for c in html.unescape(text) if c.isalnum())
 
-def fit_captions(text, samples, rate):
+def timed_captions(text, words, seconds):
+    # Provider tokens must cover the exact script, ignoring punctuation/space.
+    assert normalized(text)==normalized(''.join(w['text'] for w in words)), 'Voice/script token mismatch'
+    spans=[];position=0
+    for word in words:
+        length=len(normalized(word['text']))
+        if not length:continue
+        spans.append((position,position+length,word['offset']/1e7,(word['offset']+word['duration'])/1e7))
+        position+=length
     phrases=re.findall(r'[^，。！？；：]+[，。！？；：]?',text)
-    # Split rare long phrases without losing characters from the narration.
     pieces=[]
     for phrase in phrases:
         while len(phrase)>38:
             pieces.append(phrase[:25]);phrase=phrase[25:]
         if phrase:pieces.append(phrase)
-    step=int(rate*.02)
-    blocks=samples[:len(samples)//step*step].reshape(-1,step)
-    rms=np.sqrt(np.mean(blocks.astype(float)**2,axis=1))
-    voiced=rms>max(.004,float(rms.max())*.032)
-    active=np.flatnonzero(voiced)
-    start=max(0,active[0]*.02-.06)
-    end=min(len(samples)/rate,(active[-1]+1)*.02+.08)
-    pauses=[]
-    a=None
-    for i,v in enumerate(voiced):
-        if not v and a is None:a=i
-        if v and a is not None:
-            if (i-a)*.02>=.12 and a*.02>start and i*.02<end:pauses.append(((i+a)*.01,(i-a)*.02))
-            a=None
-    weights=np.array([weight(p) for p in pieces]);cumulative=np.cumsum(weights)/sum(weights)
-    # Dynamic programming keeps boundaries ordered while balancing phrase
-    # length and pause evidence. The source text remains the authority.
-    layers=[[(start,0.)]]
-    for j in range(len(pieces)-1):
-        ideal=start+(end-start)*cumulative[j]
-        candidates=[(t,-min(gap,.55)*2) for t,gap in pauses if abs(t-ideal)<2.1]
-        candidates.append((ideal,.65))
-        layers.append(sorted(candidates))
-    layers.append([(end,0.)])
-    costs=[0.];backs=[]
-    for j in range(1,len(layers)):
-        new=[];back=[]
-        ideal_len=(end-start)*weights[j-1]/sum(weights)
-        ideal_pos=start+(end-start)*cumulative[j-1]
-        for t,penalty in layers[j]:
-            options=[]
-            for k,(prev,_) in enumerate(layers[j-1]):
-                delta=t-prev
-                options.append(costs[k]+((delta-ideal_len)/max(.5,ideal_len*.35))**2+((t-ideal_pos)/1.7)**2+penalty if delta>.22 else 1e9)
-            k=int(np.argmin(options));new.append(options[k]);back.append(k)
-        costs=new;backs.append(back)
-    k=0;bounds=[end]
-    for j in range(len(layers)-1,0,-1):
-        k=backs[j-1][k];bounds.append(layers[j-1][k][0])
-    bounds=list(reversed(bounds))
-    return [dict(text=p,startMs=round((bounds[i]+LEAD/FPS)*1000),endMs=round((bounds[i+1]+LEAD/FPS)*1000),timestampMs=None,confidence=None,pageBreakAfter=True) for i,p in enumerate(pieces)]
+    starts=[];ends=[];position=0
+    for phrase in pieces:
+        length=len(normalized(phrase));end=position+length
+        matching=[span for span in spans if span[0]<end and span[1]>position]
+        assert matching,phrase
+        first,last=matching[0],matching[-1]
+        start_time=first[2]+(first[3]-first[2])*(position-first[0])/(first[1]-first[0])
+        end_time=last[2]+(last[3]-last[2])*(end-last[0])/(last[1]-last[0])
+        starts.append(round((max(0,start_time-.06)+LEAD/FPS)*1000))
+        ends.append(round((min(seconds,end_time+.22)+LEAD/FPS)*1000))
+        position=end
+    return [dict(text=p,startMs=starts[i],endMs=starts[i+1] if i+1<len(starts) else ends[i],timestampMs=None,confidence=None,pageBreakAfter=True) for i,p in enumerate(pieces)]
 
 timeline=[];offset=0;srt=[]
 for scene in scenes:
-    sid=scene['id'];raw=ROOT/f'build/voice-raw/{sid}.wav';pcm=ROOT/f'build/voice-normalized/{sid}.wav';mp3=ROOT/f'public/voice/{sid}.mp3'
+    sid=scene['id'];raw=ROOT/f'build/voice-broadcast/{sid}.mp3';pcm=ROOT/f'build/voice-normalized/{sid}.wav';mp3=ROOT/f'public/voice/{sid}.mp3'
     assert raw.exists(),f'Missing voice track: {raw}'
-    subprocess.run([FFMPEG,'-hide_banner','-loglevel','error','-y','-i',str(raw),'-af','highpass=f=70,atempo=1.035,loudnorm=I=-18:TP=-2:LRA=7','-ar','48000','-ac','1','-c:a','pcm_s16le',str(pcm)],check=True)
+    words=json.loads((ROOT/f'build/voice-broadcast/{sid}.words.json').read_text(encoding='utf-8'))
+    assert normalized(scene['text'])==normalized(''.join(w['text'] for w in words)),sid+': word timing does not cover script'
+    shutil.copyfile(ROOT/f'build/voice-broadcast/{sid}.words.json',ROOT/f'public/word-timing/{sid}.json')
+    spoken_end=max((w['offset']+w['duration'])/1e7 for w in words)
+    subprocess.run([FFMPEG,'-hide_banner','-loglevel','error','-y','-i',str(raw),'-t',str(spoken_end+.26),'-af','highpass=f=70,loudnorm=I=-18:TP=-2:LRA=7','-ar','48000','-ac','1','-c:a','pcm_s16le',str(pcm)],check=True)
     with wave.open(str(pcm),'rb') as w:
         rate=w.getframerate();samples=np.frombuffer(w.readframes(w.getnframes()),dtype='<i2').astype(float)/32768
     seconds=len(samples)/rate
     subprocess.run([FFMPEG,'-hide_banner','-loglevel','error','-y','-i',str(pcm),'-c:a','libmp3lame','-b:a','128k',str(mp3)],check=True)
-    captions=fit_captions(scene['text'],samples,rate)
+    captions=timed_captions(scene['text'],words,seconds)
     (ROOT/f'public/captions/{sid}.json').write_text(json.dumps(captions,ensure_ascii=False,indent=2),encoding='utf-8')
     frames=math.ceil(seconds*FPS)+42
     item={**scene,'audioSeconds':round(seconds,6),'frames':frames,'from':offset,'durationSeconds':frames/FPS,'captions':captions}
@@ -97,6 +79,7 @@ for scene in scenes:
     print(f'{sid}: {seconds:.2f}s, {len(captions)} caption pages',flush=True)
 total=offset+TRANSITION
 (ROOT/'build/timeline.json').write_text(json.dumps({'fps':FPS,'transitionFrames':TRANSITION,'durationInFrames':total,'scenes':timeline},ensure_ascii=False,indent=2),encoding='utf-8')
+shutil.copyfile(ROOT/'build/voice-broadcast/provider.json',ROOT/'配音参数.json')
 
 def stamp(ms):
     h,ms=divmod(ms,3600000);m,ms=divmod(ms,60000);s,ms=divmod(ms,1000)

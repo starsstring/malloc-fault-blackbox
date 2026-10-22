@@ -1,64 +1,64 @@
 [
   {
     "text": "放到嵌入式系统里，",
-    "startMs": 680,
-    "endMs": 2600,
+    "startMs": 641,
+    "endMs": 2542,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "动态分配带来了灵活性，",
-    "startMs": 2600,
-    "endMs": 4900,
+    "startMs": 2542,
+    "endMs": 4748,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也带来了资源和时序上的管理成本。",
-    "startMs": 4900,
-    "endMs": 7800,
+    "startMs": 4748,
+    "endMs": 8219,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "对于要求严格的任务，",
-    "startMs": 7800,
-    "endMs": 9710,
+    "startMs": 8219,
+    "endMs": 10132,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "可以评估预分配、固定容量或者内存池。",
-    "startMs": 9710,
-    "endMs": 13420,
+    "startMs": 10132,
+    "endMs": 14354,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "是否使用 malloc，",
-    "startMs": 13420,
-    "endMs": 14925,
+    "startMs": 14354,
+    "endMs": 16063,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "要看对象的寿命、资源预算和时序要求，",
-    "startMs": 14925,
-    "endMs": 18410,
+    "startMs": 16063,
+    "endMs": 20043,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "不能只凭一种写法就保证硬实时。",
-    "startMs": 18410,
-    "endMs": 21466,
+    "startMs": 20043,
+    "endMs": 23066,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

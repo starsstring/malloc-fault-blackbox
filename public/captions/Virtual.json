@@ -1,56 +1,56 @@
 [
   {
     "text": "还有一个容易混淆的地方：",
-    "startMs": 600,
-    "endMs": 4310,
+    "startMs": 641,
+    "endMs": 2835,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "程序看到连续的地址，",
-    "startMs": 4310,
-    "endMs": 6390,
+    "startMs": 2835,
+    "endMs": 4877,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "并不意味着物理内存里的页也挨在一起。",
-    "startMs": 6390,
-    "endMs": 10270,
+    "startMs": 4877,
+    "endMs": 9060,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "它们可以通过映射连起来。",
-    "startMs": 10270,
-    "endMs": 12840,
+    "startMs": 9060,
+    "endMs": 11535,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "Linux 还可能按需建立物理页，",
-    "startMs": 12840,
-    "endMs": 15810,
+    "startMs": 11535,
+    "endMs": 14456,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "所以申请成功，",
-    "startMs": 15810,
-    "endMs": 17630,
+    "startMs": 14456,
+    "endMs": 15859,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也不代表这片范围对应的物理内存已经全部到位。",
-    "startMs": 17630,
-    "endMs": 22319,
+    "startMs": 15859,
+    "endMs": 20239,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

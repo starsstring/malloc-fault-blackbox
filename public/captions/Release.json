@@ -1,80 +1,80 @@
 [
   {
     "text": "不再需要小画时，",
-    "startMs": 600,
-    "endMs": 2558,
+    "startMs": 641,
+    "endMs": 2223,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "就该释放这块空间了。",
-    "startMs": 2558,
-    "endMs": 5640,
+    "startMs": 2223,
+    "endMs": 4430,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "free 结束的是对象的生命周期，",
-    "startMs": 5640,
-    "endMs": 9160,
+    "startMs": 4430,
+    "endMs": 7351,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "不承诺把内容清零，",
-    "startMs": 9160,
-    "endMs": 11420,
+    "startMs": 7351,
+    "endMs": 9303,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也不保证马上归还操作系统。",
-    "startMs": 11420,
-    "endMs": 14490,
+    "startMs": 9303,
+    "endMs": 12402,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "释放以后，",
-    "startMs": 14490,
-    "endMs": 16090,
+    "startMs": 12402,
+    "endMs": 13576,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "即使某些颜色看起来还在，",
-    "startMs": 16090,
-    "endMs": 19180,
+    "startMs": 13576,
+    "endMs": 15948,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也不能继续读写。",
-    "startMs": 19180,
-    "endMs": 21050,
+    "startMs": 15948,
+    "endMs": 17887,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "把一个指针设为空，",
-    "startMs": 21050,
-    "endMs": 22311,
+    "startMs": 17887,
+    "endMs": 19736,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也不会自动修复指向旧对象的其他别名。",
-    "startMs": 22311,
-    "endMs": 26879,
+    "startMs": 19736,
+    "endMs": 23468,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

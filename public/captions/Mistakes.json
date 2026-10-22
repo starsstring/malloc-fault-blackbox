@@ -1,80 +1,80 @@
 [
   {
     "text": "丢掉仍需释放的块的所有引用，",
-    "startMs": 600,
-    "endMs": 3324,
+    "startMs": 641,
+    "endMs": 3294,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "是内存泄漏。",
-    "startMs": 3324,
-    "endMs": 4480,
+    "startMs": 3294,
+    "endMs": 4940,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "释放后继续访问，",
-    "startMs": 4480,
-    "endMs": 5946,
+    "startMs": 4940,
+    "endMs": 6675,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "是使用已经失效的对象。",
-    "startMs": 5946,
-    "endMs": 8320,
+    "startMs": 6675,
+    "endMs": 9188,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "对同一块重复释放，",
-    "startMs": 8320,
-    "endMs": 10280,
+    "startMs": 9188,
+    "endMs": 10986,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "也属于未定义行为。",
-    "startMs": 10280,
-    "endMs": 12000,
+    "startMs": 10986,
+    "endMs": 13091,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "我们不用真的执行这些错误，",
-    "startMs": 12000,
-    "endMs": 14340,
+    "startMs": 13091,
+    "endMs": 15425,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "只要记住一个问题：",
-    "startMs": 14340,
-    "endMs": 15950,
+    "startMs": 15425,
+    "endMs": 17096,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "现在谁拥有它，",
-    "startMs": 15950,
-    "endMs": 17400,
+    "startMs": 17096,
+    "endMs": 18537,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true
   },
   {
     "text": "最后由谁负责释放？",
-    "startMs": 17400,
-    "endMs": 18757,
+    "startMs": 18537,
+    "endMs": 20373,
     "timestampMs": null,
     "confidence": null,
     "pageBreakAfter": true

@@ -17,7 +17,7 @@ readme=f'''# malloc 的一生：一张会长大的像素画
 
 ## 作品内容
 
-采用 Remotion 绘制连续动画，配有温柔自然的女声解说和中文字幕。像素逐格上色、扩容搬迁、失败保留原图、释放后禁止访问；进一步展示虚拟页映射、空闲块拆分与碎片合并。
+采用 Remotion 绘制连续动画，全片统一暖白底、陶土红与灰绿强调色，配有平稳清晰的女声解说和中文字幕。像素逐格上色、扩容搬迁、失败保留原图、释放后禁止访问；进一步展示虚拟页映射、空闲块拆分与碎片合并。
 
 | 开始时间 | 章节 |
 | --- | --- |
@@ -52,9 +52,10 @@ pnpm render
 | `narration.json` | 解说文稿 |
 | `public/voice/` | 已生成的女声配音 |
 | `public/captions/` | 每章字幕时间 |
+| `public/word-timing/` | 语音服务返回的逐词时间记录 |
 | `examples/pixels.c` | 防溢出、判空、初始化、安全扩容和释放的最小示例 |
 
-如需修改讲稿并重新生成声音，可参考 `tools/generate-voice.mjs`。在线演示可能有服务与额度限制；修改后需重新核对配音和字幕。`tools/assemble.py` 使用 FFmpeg 和 NumPy，从原始 WAV 构建规范化音频、字幕及场景节点。
+如需修改讲稿并重新生成声音，安装 `edge-tts==7.3.1` 后运行 `python tools/generate_broadcast.py`，再运行 `python tools/assemble.py`。后者需要 FFmpeg 与 NumPy，会根据语音服务的逐词时间记录构建字幕和场景；没有额外加速或调高音调。在线服务可用性会变化，修改后仍需核对实际配音。
 
 ## 最小 C 示例
 
